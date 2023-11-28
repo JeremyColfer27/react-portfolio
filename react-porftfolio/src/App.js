@@ -1,31 +1,27 @@
 import logo from './logo.svg';
 import './App.css';
 import './styles.css'
-
 import { Gradient } from 'whatamesh'
+import {useEffect} from 'react'
+import generic from './projects/TemplatePage'
+
+
 function App() {
-  const gradient = new Gradient()
-  gradient.initGradient('#gradient-canvas')
+  const projects = [generic, generic, generic, generic, generic, generic]
+
+  useEffect(() => {
+    const gradient = new Gradient();
+    gradient.initGradient('#gradient-canvas');
+  }, [])
+  
 
   return (
-    <>
-    {/* // <!-------------- Background Gradient --------------> */}
+    <div onClick={() => {}}>
+
     <div className="gradient-container">
-        {/* <!-- <div id="box">     --> */}
         <canvas id="gradient-canvas" data-transition-in/>
        
     </div>
-    {/* <script src="Gradient.js"></script> */}
-    {/* <script>
-        //import { Gradient } from './Gradient.js'
-
-        // Create your instance
-        const gradient = new Gradient()
-
-        // Call `initGradient` with the selector to your canvas
-        gradient.initGradient('#gradient-canvas')
-    </script> */}
-   {/* <!-------------- Background Gradient --------------> */}
 
 
    <div className="noise"></div>
@@ -45,15 +41,48 @@ function App() {
 
     <div className="buttons">
       <button type="button">About</button>
-      <button type="button">Projects</button>
+      <button type="button"
+        onClick = {() => document.getElementById("projects-page").classList.toggle("hidden")}
+      >Projects</button>
       <button type="button">Contact</button>
     </div>
 
-  
- 
-</div>
-</>
+    <div className="projects-page hidden" id="projects-page">
+      <button className='projects-close-button'
+       onClick={() => document.getElementById("projects-page").classList.toggle("hidden")}
+      >
+        X
+      </button>
+      <h2>Projects</h2>
 
+      <div className="projects-container">
+        {/* <div className="project hidden-project"
+             onClick={e => e.target.classList.toggle("hidden-project")}> */}
+          {
+            projects.map((p, i) =>
+              <div className="project hidden-project" 
+                   key={p.title + i} 
+                   id={"project-" + i.toString()}
+                   onClick = {e => {document.getElementById("project-" + i.toString()).classList.toggle("hidden-project")}}
+                   >
+
+                <p className="project-thumbnail-title">{p.title}</p>
+
+                <img className="project-thumbnail-image" 
+                     src={p.img} 
+                     alt={p.imgAltText} />
+                <p.TemplatePage closeFunction={{id: `project-${i.toString()}`, classToToggle:"hidden-project"}}/>
+                
+
+
+              </div>
+            )
+          }
+      </div>
+
+  </div>
+  </div>
+  </div>
   );
 }
 
