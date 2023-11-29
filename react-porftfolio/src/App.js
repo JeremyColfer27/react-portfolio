@@ -71,8 +71,15 @@ function App() {
                    id={"project-" + i.toString()}
                    onClick = {e => {document.getElementById("project-" + i.toString()).classList.toggle("hidden-project")}}
                    >
+                <div className="project-info">
+                  <h3 className="project-thumbnail-title">{p.title}</h3>
+                  <div className="tags">
+                    {p.tags.map( (t) => 
+                      <p className='tag'>{t}</p>
+                    )}
+                  </div>
+                </div>
 
-                <h3 className="project-thumbnail-title">{p.title}</h3>
 
                 <div className="overlay"></div>
                 <img className="project-thumbnail-image" 

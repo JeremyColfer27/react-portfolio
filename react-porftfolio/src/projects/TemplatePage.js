@@ -2,7 +2,7 @@ import './generic-project.css'
 import img from './images/dronecloud-image.png'
 const title = "Generic Title"
 const imgAltText = "Generic project image"
-
+const tags = ["Client", "UX", "Team", "Figma"]
 
 function TemplatePage(props){
     const closeFunction = props.closeFunction
@@ -49,4 +49,4 @@ function TemplatePage(props){
 
 }
 
-export default {title, img, imgAltText, TemplatePage};
+export default {title, tags, img, imgAltText, TemplatePage};

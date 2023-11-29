@@ -45,11 +45,26 @@
     cursor:auto;
     border-radius: 20px;
 
+    /* outline: 400px rgba(0, 0, 0, 0.416) solid; */
+    transition: 4s;
+    animation-name: slidein;
+    animation-duration: 0.2s;
+    animation-fill-mode: backwards;
+    transform-origin: 50vw 50vh;
+}
+@keyframes slidein {
+    0%{
+        scale: 0.01;
+    }
+    100%{
+        scale: 1;
+        /* outline: 400px rgba(0, 0, 0, 0.416) solid; */
+
+    }  
 }
 
-.expanded-project{
-    outline: 400px rgba(0, 0, 0, 0.416) solid;
-
+.expanded-project.hidden{
+    display: none;
 }
 
 .expanded-project-body{
@@ -65,10 +80,6 @@
 
 }
 
-.expanded-project.hidden{
-    /* display: none; */
-    display: none;
-}
 
 .project-headline{
     /* max-width: 600px; */
