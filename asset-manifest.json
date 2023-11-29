@@ -1,0 +1,21 @@
+{
+  "files": {
+    "main.css": "/portfolio/static/css/main.d0891249.css",
+    "main.js": "/portfolio/static/js/main.e29ff2e1.js",
+    "static/js/787.b12f110f.chunk.js": "/portfolio/static/js/787.b12f110f.chunk.js",
+    "static/media/dronecloud-image.png": "/portfolio/static/media/dronecloud-image.eab9e7167b89345c4566.png",
+    "static/media/Spektra-CondensedBoldItalic.ttf": "/portfolio/static/media/Spektra-CondensedBoldItalic.3da6bbf541633b695f50.ttf",
+    "static/media/Spektra-CondensedBoldBackslant.ttf": "/portfolio/static/media/Spektra-CondensedBoldBackslant.3bbca022fcef674a9462.ttf",
+    "static/media/noise.png": "/portfolio/static/media/noise.b9acbf7a1506d3166219.png",
+    "static/media/Acumin-RPro.otf": "/portfolio/static/media/Acumin-RPro.0ff8c5d6797bc06270d7.otf",
+    "static/media/logo.svg": "/portfolio/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
+    "index.html": "/portfolio/index.html",
+    "main.d0891249.css.map": "/portfolio/static/css/main.d0891249.css.map",
+    "main.e29ff2e1.js.map": "/portfolio/static/js/main.e29ff2e1.js.map",
+    "787.b12f110f.chunk.js.map": "/portfolio/static/js/787.b12f110f.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.d0891249.css",
+    "static/js/main.e29ff2e1.js"
+  ]
+}
