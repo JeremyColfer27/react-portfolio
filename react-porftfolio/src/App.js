@@ -7,7 +7,7 @@ import generic from './projects/TemplatePage'
 
 
 function App() {
-  const projects = [generic, generic, generic, generic, generic, generic]
+  const projects = [generic, generic, generic, generic, generic, generic, generic, generic]
 
   useEffect(() => {
     const gradient = new Gradient();
@@ -30,7 +30,7 @@ function App() {
 
     <div className="name">
       <h1>
-        <span className="liam">LIAM K</span>
+        <span className="liam">LIAM</span>
         <span className="jones"> JONES</span>
       </h1>
     </div>
@@ -46,14 +46,20 @@ function App() {
       >Projects</button>
       <button type="button">Contact</button>
     </div>
+  </div>
 
-    <div className="projects-page hidden" id="projects-page">
-      <button className='projects-close-button'
-       onClick={() => document.getElementById("projects-page").classList.toggle("hidden")}
-      >
-        X
-      </button>
-      <h2>Projects</h2>
+      
+
+  <div className="projects-page hidden" id="projects-page">
+      <div className="top">
+        <h2>Projects</h2>
+        <button className='projects-close-button'
+        onClick={() => document.getElementById("projects-page").classList.toggle("hidden")}
+        >
+          X
+        </button>
+      </div>
+
 
       <div className="projects-container">
         {/* <div className="project hidden-project"
@@ -66,8 +72,9 @@ function App() {
                    onClick = {e => {document.getElementById("project-" + i.toString()).classList.toggle("hidden-project")}}
                    >
 
-                <p className="project-thumbnail-title">{p.title}</p>
+                <h3 className="project-thumbnail-title">{p.title}</h3>
 
+                <div className="overlay"></div>
                 <img className="project-thumbnail-image" 
                      src={p.img} 
                      alt={p.imgAltText} />
@@ -79,9 +86,8 @@ function App() {
             )
           }
       </div>
+  </div>
 
-  </div>
-  </div>
   </div>
   );
 }

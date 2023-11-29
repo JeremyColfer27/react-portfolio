@@ -8,12 +8,12 @@ function TemplatePage(props){
     const closeFunction = props.closeFunction
     return(
         <div className='expanded-project'>
-            <div className="individual-project-close-container">
-                <button className='individual-project-close-button'
+            <div className="top">
+                <button className='projects-close-button'
                   onClick={e => {e.stopPropagation();document.getElementById(closeFunction.id)
                                          .classList.toggle(closeFunction.classToToggle)}}
                   >
-                    {"<"}
+                    {"X"}
                 </button>
             </div>
 
@@ -33,11 +33,11 @@ function TemplatePage(props){
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque nihil aut eos quaerat sed deserunt molestiae alias tenetur obcaecati temporibus voluptates officiis id, ipsa eveniet sint odit enim earum molestias, eaque porro, saepe reprehenderit quibusdam quae. Doloremque asperiores repellendus corrupti.</p>
                 </div>
                 <div className="project-section">
-                    <h2>Project section 1</h2>
+                    <h2>Project section 2</h2>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque nihil aut eos quaerat sed deserunt molestiae alias tenetur obcaecati temporibus voluptates officiis id, ipsa eveniet sint odit enim earum molestias, eaque porro, saepe reprehenderit quibusdam quae. Doloremque asperiores repellendus corrupti.</p>
                 </div>
                 <div className="project-section">
-                    <h2>Project section 1</h2>
+                    <h2>Project section 3</h2>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque nihil aut eos quaerat sed deserunt molestiae alias tenetur obcaecati temporibus voluptates officiis id, ipsa eveniet sint odit enim earum molestias, eaque porro, saepe reprehenderit quibusdam quae. Doloremque asperiores repellendus corrupti.</p>
                 </div>
                 </div>
