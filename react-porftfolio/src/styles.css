@@ -6,6 +6,10 @@
     /* outline: 2px red dotted; */
  }
 
+:root{
+  --viewport-height: 100vh;
+}
+
 html{
   width: 100vw;
 }
@@ -40,7 +44,7 @@ h1,h2, h3{
 
  #gradient-canvas {
     width:100vw;
-    height:100vh;
+    height: var(--viewport-height);
     /* --gradient-color-1: #2a80b9; 
     --gradient-color-2: #2b3e50; 
     --gradient-color-3: #e74c3b;  
@@ -60,7 +64,7 @@ h1,h2, h3{
   #box {
 
     width: 100vw;
-    height: 100vh;
+    height: var(--viewport-height);
     position: absolute;
     background: 
       repeating-radial-gradient(closest-corner at 1% 21%, rgba(255,0,255,.5), rgba(0,255,255,.5), #000 1.7%), 
@@ -90,7 +94,7 @@ h1,h2, h3{
     position: absolute;
     background-image: url(./noise.png);
     width: 100vw;
-    height: 100vh;
+    height: var(--viewport-height);
     opacity: 10%;
 
   }
@@ -102,7 +106,7 @@ h1,h2, h3{
     display: flex;
     flex-direction: column;
     border: 2px solid white;
-    height: 100vh;
+    height: var(--viewport-height);
     /* grid-template-rows: 45vh 10vh 45vh; */
     align-items: center;
     justify-content: center;

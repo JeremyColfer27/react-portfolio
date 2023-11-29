@@ -9,11 +9,21 @@ import generic from './projects/TemplatePage'
 function App() {
   const projects = [generic, generic, generic, generic, generic, generic, generic, generic]
 
+  window.addEventListener("resize", () => {
+    document.documentElement.setAttribute("style", `--viewport-height: ${(window.innerHeight).toString()}px`);
+  })
+
   useEffect(() => {
     const gradient = new Gradient();
     gradient.initGradient('#gradient-canvas');
   }, [])
-  
+
+  useEffect(() => {
+    console.log(window.innerHeight);
+    document.documentElement.setAttribute("style", `--viewport-height: ${(window.innerHeight).toString()}px`);
+    // document.documentElement.setAttribute("style", `--viewport-height: ${"300"}px`);
+
+  }, [])
 
   return (
     <div onClick={() => {}}>
