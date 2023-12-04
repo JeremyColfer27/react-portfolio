@@ -11,10 +11,15 @@
 }
 
 html{
+  padding:0;
+  margin: 0;
   width: 100vw;
+  max-width: 100vw;
+  overflow-x: none;
 }
 
 body {
+  width: 100%;
     position: relative;
     font-family: AcuminPro;
 }
@@ -198,11 +203,15 @@ h1,h2, h3{
 
   display: flex;
   flex-direction: column;
-  gap: 1em;
+  gap: 2em;
 
   padding: 2em;
   border-radius: 40px;
 
+}
+
+.projects-page h2 {
+  font-size: 1.8rem;
 }
 
 .projects-page.hidden{
@@ -212,8 +221,10 @@ h1,h2, h3{
 .projects-container{
   display: grid;
   /* grid-template-columns: repeat(3, 1fr); */
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr) );
-  grid-template-rows: repeat(auto-fit, minmax(200px, 1fr));
+  --min-column-width:300px;
+  --min-row-height:300px;
+  grid-template-columns: repeat(auto-fit, minmax(var(--min-column-width), 1fr) );
+  grid-template-rows: repeat(auto-fit, minmax(var(--min-row-height), 1fr));
   position: relative;
   gap: 1em;
 
@@ -227,31 +238,38 @@ h1,h2, h3{
 .top{
   /* position: sticky; */
   position: relative;
-  top:0%;
+  top:0.5em;
   width: 100%;
   min-height: 2em;
+  text-align: center;
 }
 
 .projects-close-button{
+  color: rgb(92, 92, 92);
   position: absolute;
-  right: 2.25em;
+  left: 0.25em;
   background: none;
   border: none;
-  text-align: right;
+  text-align: left;
   font-size: 1.45em;
   font-weight: bold;
 
   top:0;
-  right: 0;
+  /* right: 0.5em; */
 
   cursor: pointer;
+}
+
+.projects-close-button:hover{
+  color: black;
 }
   
 
 
 .project{
   width: 100%;
-  min-height: 200px;
+  /* min-height: 200px; */
+  min-height: var(--min-row-height);
   position: relative;
 
   color: black;
@@ -280,14 +298,20 @@ h1,h2, h3{
 }
 
 .tag{
-  font-size: 0.8rem;
+  font-size: 0.9rem;
   width: fit-content;
   height: fit-content;
   background: white;
   color: black;
-  padding:0.3em 0.5em 0em 0.5em;
-  border-radius: 10px;
+  padding:0.3em 0.7em 0.1em 0.7em;
+  border-radius: 50px;
   margin: 0;
+
+  box-shadow: 0px 1px 3px 1px rgb(55, 55, 55);
+}
+
+.project-thumbnail-title{
+  font-size: 1.4rem;
 }
 
 .project-thumbnail-image{
@@ -318,8 +342,8 @@ h1,h2, h3{
 }
 
 .projects-container :nth-child(1){
-  grid-column: span 2;
-  grid-row: span 2;
+    grid-column: span 2;
+    grid-row: span 1;
 }
 
 .project{
@@ -337,6 +361,9 @@ h1,h2, h3{
   .projects-container{
     grid-template-columns: 1fr;
     justify-content: center;
+
+    --min-column-width:300px;
+    --min-row-height:250px;
   }
 
   .projects-container .project{

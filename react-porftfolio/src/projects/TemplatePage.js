@@ -8,8 +8,8 @@ function TemplatePage(props){
     const closeFunction = props.closeFunction
     return(
         <div className='expanded-project'>
-            <div className="top">
-                <button className='projects-close-button'
+            <div className="top expanded-project-top">
+                <button className='projects-close-button expanded-project-close-button'
                   onClick={e => {e.stopPropagation();document.getElementById(closeFunction.id)
                                          .classList.toggle(closeFunction.classToToggle)}}
                   >
