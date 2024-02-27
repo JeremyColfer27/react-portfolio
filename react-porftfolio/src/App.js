@@ -1,4 +1,6 @@
 import logo from './logo.svg';
+import close from './assets/close.png';
+
 import './App.css';
 import './styles.css'
 import { Gradient } from 'whatamesh'
@@ -61,12 +63,16 @@ function App() {
       
 
   <div className="projects-page hidden" id="projects-page">
+      <div className="projects-backdrop">
+
+        
+      </div>
       <div className="top">
         <h2>Projects</h2>
         <button className='projects-close-button'
         onClick={() => document.getElementById("projects-page").classList.toggle("hidden")}
         >
-          X
+          <img className="close-button" src={close} alt="close window icon" />
         </button>
       </div>
 

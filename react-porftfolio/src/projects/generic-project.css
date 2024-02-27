@@ -13,7 +13,7 @@
 ::-webkit-scrollbar-thumb{
     /* background: hsl(120 100% 20% / 1);  */
     border-radius: 100vw;
-    background: rgba(0, 0, 0, 0.8);
+    background: rgba(0, 0, 0, 0.366);
 }
 
 ::-webkit-scrollbar-thumb:hover{
@@ -23,8 +23,8 @@
 
 .expanded-project{
     position: fixed;
-    width: 80vw;
-    height: 80vh;
+    width: 85vw;
+    height: 85vh;
     background: white;
     top: 50%;
     left: 50%;
@@ -46,7 +46,7 @@
     border-radius: 40px;
 
     /* outline: 400px rgba(0, 0, 0, 0.416) solid; */
-    transition: 4s;
+    transition: 0.3s;
     animation-name: slidein;
     animation-duration: 0.2s;
     animation-fill-mode: backwards;
