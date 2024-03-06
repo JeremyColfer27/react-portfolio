@@ -199,6 +199,9 @@ h1,h2, h3{
   transform: translate(-50%, -50%) scale(1);
   position: fixed;
   z-index: 3;
+
+  color:white;
+
   
   display: flex;
   flex-direction: column;
@@ -238,6 +241,7 @@ h1,h2, h3{
 }
 
 .projects-container{
+  color:white;
   display: grid;
   /* grid-template-columns: repeat(3, 1fr); */
   --min-column-width:300px;
