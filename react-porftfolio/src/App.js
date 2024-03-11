@@ -1,3 +1,5 @@
+import React from 'react';
+
 import logo from './logo.svg';
 import close from './assets/close.png';
 

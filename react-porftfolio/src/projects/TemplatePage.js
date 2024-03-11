@@ -1,3 +1,6 @@
+import React from 'react';
+
+
 import './generic-project.css'
 import img from './images/dronecloud-image.png'
 const title = "Generic Title"
