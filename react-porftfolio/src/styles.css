@@ -1,3 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@100..900&display=swap');
+@font-face {
+  font-family: SpektraL;
+  src: url(./fonts/Spektra-CondensedBoldBackslant.ttf);
+}
+@font-face {
+  font-family: SpektraR;
+  src: url(./fonts/Spektra-CondensedBoldItalic.ttf);
+}
+@font-face {
+  font-family: AcuminPro;
+  src: url(./fonts/Acumin-RPro.otf);
+}
+
 *{ 
     /* Removes automatically added padding and margins */
     padding: 0;
@@ -24,29 +38,6 @@ body {
     font-family: AcuminPro;
 }
 
-body * {
-  outline: 0px solid red;
-}
-
-h1,h2, h3{
-  text-transform: uppercase;
-}
-
-
-@font-face {
-  font-family: SpektraL;
-  src: url(./fonts/Spektra-CondensedBoldBackslant.ttf);
-}
-@font-face {
-  font-family: SpektraR;
-  src: url(./fonts/Spektra-CondensedBoldItalic.ttf);
-}
-@font-face {
-  font-family: AcuminPro;
-  src: url(./fonts/Acumin-RPro.otf);
-}
-
-
  #gradient-canvas {
     width:100vw;
     height: var(--viewport-height);
@@ -61,13 +52,9 @@ h1,h2, h3{
     --gradient-color-4: #0F595E;
     position: absolute;
     z-index: 0;
-
-
-    
   }
 
   #box {
-
     width: 100vw;
     height: var(--viewport-height);
     position: absolute;
@@ -91,8 +78,6 @@ h1,h2, h3{
     mix-blend-mode: exclusion; */
     content: '';
     opacity: 0.2;
-
-
   }
 
   .noise {
@@ -102,54 +87,31 @@ h1,h2, h3{
     height: var(--viewport-height);
     opacity: 10%;
     z-index: 0;
-
   }
-
-
 
   .grid-container {
-    /* position: relative; */
     display: flex;
     flex-direction: column;
-    border: 2px solid white;
     height: var(--viewport-height);
-    /* grid-template-rows: 45vh 10vh 45vh; */
     align-items: center;
     justify-content: center;
-    color: #B0D2CC;
+    color: #adadad;
     gap: 3.5rem;
-    /* row-gap: 50px; */
-    /* column-gap: 50px; */
     mix-blend-mode: color-dodge;
     position: relative;
-    /* z-index: 0; */
-
   }
-
-  /* .grid-container::before{
-    position: absolute;
-    mix-blend-mode: color-dodge;
-    content: '';
-    width: 100%;
-    height: 100%;
-    z-index: 0;
-    background-color: green;
-  } */
-
-
 
   .name{
-    z-index: 2;
+
     font-size: 30pt;
     padding: 0% 0 0 0;
-    /* background-blend-mode: color-dodge; */
   }
   .liam{
-    z-index: 2;
+
     font-family: SpektraL;
   }
   .jones{
-    z-index: 2;
+
     font-family: SpektraR;
   }
  
@@ -162,7 +124,6 @@ h1,h2, h3{
   }
 
   .buttons{
-    z-index: 2;
     font-family: AcuminPro;
     padding: 0 0 0% 0;
     display: flex;
@@ -172,34 +133,28 @@ h1,h2, h3{
   }
 
   .buttons button{
-    z-index: 2;
     background: none;
-    color: #B0D2CC;
+    color: #adadad;
     border-radius:100px;
-    border: 2px solid #B0D2CC;
+    border: 2px solid #adadad;
     width: 10em;
     padding: 1rem;
-    mix-blend-mode: difference;
+    mix-blend-mode: color-dodge;
     cursor: pointer;
     font-size: 0.85em;
   }
 
   h1 {
-    z-index: 2;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     gap:0;
     line-height: 0.9em;
-
-    /* font-size: clamp(20px, clam(1rem + 20vw), 40px); */
   }
 
 .projects-page{
   overflow: hidden;
-  /* isolation: isolate; */
-  /* mix-blend-mode: normal; */
   width: 90vw;
   height: 90vh;
   top:50%;
@@ -207,19 +162,14 @@ h1,h2, h3{
   transform: translate(-50%, -50%) scale(1);
   position: fixed;
   z-index: 3;
-
-  color:white;
-  /* hi again again */
-
-  
   display: flex;
   flex-direction: column;
   gap: 2em;
-
   padding: 2em;
   border-radius: 20px;
-  backdrop-filter: blur(5px);
   transition: 0.3s;
+  color:white; /*Title of*/
+  backdrop-filter: blur(5px);
 }
 
 .projects-backdrop{
@@ -228,55 +178,43 @@ h1,h2, h3{
   left: 0;
   width: 100%;
   height: 100%;
-
-  background-color: rgb(0, 0, 0);
-  opacity: 0.4;
+  background-color: rgb(255, 255, 255);
+  opacity: 0.5;
   backdrop-filter: blur(90px);
-
-  overflow: auto;
-  
+  overflow: auto; 
 }
 
 .projects-page h2 {
   font-size: 1.8rem;
+  font-family: "Big Shoulders Display", sans-serif;
 }
 
 .projects-page.hidden{
-  /* display: none; */
-
   transform: translate(-50%, -50%) scale(0);
   transform-origin: center 75%;
-
 }
 
 .projects-container{
   color:white;
   display: grid;
-  /* grid-template-columns: repeat(3, 1fr); */
   --min-column-width:300px;
   --min-row-height:300px;
   grid-template-columns: repeat(auto-fit, minmax(var(--min-column-width), 1fr) );
   grid-template-rows: repeat(auto-fit, minmax(var(--min-row-height), 1fr));
   position: relative;
   gap: 1em;
-
-  border-radius: 20px;
-
   padding: 0 1em 0 0;
   overflow-y: scroll;
-
 }
 
 .top{
-  /* position: sticky; */
   position: relative;
-  top:0.5em;
   width: 100%;
-  min-height: 2em;
   text-align: center;
-  
+}
 
-  /* border: 2px solid purple; */
+.top h2 {
+  font-size: 40px;
 }
 
 .projects-close-button{
@@ -288,11 +226,14 @@ h1,h2, h3{
   text-align: left;
   font-size: 1.45em;
   font-weight: bold;
-
   top:0;
-  /* right: 0.5em; */
-
   cursor: pointer;
+}
+
+.projects-header{
+  display: block;
+  padding: 0;
+  margin: 0;
 }
 
 .close-button{
@@ -316,7 +257,7 @@ h1,h2, h3{
 
   color: black;
   mix-blend-mode: normal;
-  border-radius: 10px;
+  border-radius: 15px;
 }
 
 .project-info{

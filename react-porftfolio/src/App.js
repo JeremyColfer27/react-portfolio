@@ -8,10 +8,12 @@ import './styles.css'
 import { Gradient } from 'whatamesh'
 import {useEffect} from 'react'
 import generic from './projects/TemplatePage'
+import pot from './projects/pubsOnTap'
+
 
 
 function App() {
-  const projects = [generic, generic, generic, generic, generic, generic, generic, generic]
+  const projects = [pot, generic, generic, generic, generic, generic, generic, generic]
 
   window.addEventListener("resize", () => {
     document.documentElement.setAttribute("style", `--viewport-height: ${(window.innerHeight).toString()}px`);
@@ -29,7 +31,7 @@ function App() {
 
   }, [])
 
-  return (
+  return ( 
     <div onClick={() => {}}>
 
     <div className="gradient-container">
@@ -70,7 +72,7 @@ function App() {
         
       </div>
       <div className="top">
-        <h2>Projects</h2>
+        <h2 className='projects-header'>PROJECTS</h2>
         <button className='projects-close-button'
         onClick={() => document.getElementById("projects-page").classList.toggle("hidden")}
         >
