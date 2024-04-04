@@ -23,6 +23,10 @@
 }
 }
 
+.stupid{
+    color: green !important;
+}
+
 .expanded-project{
     position: fixed;
     width: 90vw;
@@ -62,9 +66,10 @@
     }  
 }
 
-.expanded-project.hidden{
+.hidden-project{
     display: none;
 }
+
 
 .expanded-project > * {
     /* border: 1px solid red; */

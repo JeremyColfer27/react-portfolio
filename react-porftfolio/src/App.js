@@ -1,5 +1,5 @@
 import React from 'react';
-
+import { useState } from 'react';
 import logo from './logo.svg';
 import close from './assets/close.png';
 
@@ -13,8 +13,9 @@ import pot from './projects/pubsOnTap'
 
 
 function App() {
-  const projects = [pot, generic, generic, generic, generic, generic, generic, generic]
-
+  const [projects, setProjects] = useState([pot, generic, generic, generic, generic, generic, generic, generic])
+  const [projectsHidden, setProjectsHidden] = useState(projects.map(p => {return {project: p, isHidden: true}}))
+  console.log(projectsHidden);
   window.addEventListener("resize", () => {
     document.documentElement.setAttribute("style", `--viewport-height: ${(window.innerHeight).toString()}px`);
   })
@@ -85,11 +86,11 @@ function App() {
         {/* <div className="project hidden-project"
              onClick={e => e.target.classList.toggle("hidden-project")}> */}
           {
-            projects.map((p, i) =>
-              <div className="project hidden-project" 
+            projects.filter((q,i) => true).map((p, i) =>
+              <div className="project hidden-project"         
                    key={p.title + i} 
                    id={"project-" + i.toString()}
-                   onClick = {e => {document.getElementById("project-" + i.toString()).classList.toggle("hidden-project")}}
+
                    >
                 <div className="project-info">
                   <h3 className="project-thumbnail-title">{p.title}</h3>
@@ -101,11 +102,37 @@ function App() {
                 </div>
 
 
-                <div className="overlay"></div>
+                <div className="overlay"
+                
+                onClick = {e => {; 
+                console.log("project toggled");
+                setProjectsHidden(projectsHidden.map((p,index) => {
+                  if (index == i){
+                    const newP = p;
+                    newP.isHidden = !p.isHidden
+                    return newP
+                  }
+                  else return p;  
+                  }))
+              }}
+                ></div>
                 <img className="project-thumbnail-image" 
                      src={p.img} 
                      alt={p.imgAltText} />
-                <p.TemplatePage closeFunction={{id: `project-${i.toString()}`, classToToggle:"hidden-project"}}/>
+                <p.TemplatePage 
+                hidden={projectsHidden[i].isHidden}
+                containerClasses={["expanded-project"]}
+                // closeFunction={{id: `project-${i.toString()}`, classToToggle:"hidden-project"}}
+                closeFunction = {e => setProjectsHidden(projectsHidden.map((p, index) => {
+
+                  if (index == i){
+                    const newP = projects[i];
+                    newP.isHidden = !projects[i].isHidden;
+                    return newP;
+                  }
+                  else return p;  
+                  }))}/>
+                  
                 
 
 
