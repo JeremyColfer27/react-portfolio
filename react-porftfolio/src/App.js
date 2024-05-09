@@ -8,12 +8,13 @@ import './styles.css'
 import { Gradient } from 'whatamesh'
 import {useEffect} from 'react'
 import generic from './projects/TemplatePage'
-import pot from './projects/pubsOnTap'
+import pot from './projects/pot/pubsOnTap'
+import fluentree from './projects/Fluentree'
 
 
 
 function App() {
-  const [projects, setProjects] = useState([pot, generic, generic, generic, generic, generic, generic, generic])
+  const [projects, setProjects] = useState([pot, fluentree, generic, generic, generic, generic, generic, generic])
   const [projectsHidden, setProjectsHidden] = useState(projects.map(p => {return {project: p, isHidden: true}}))
   console.log(projectsHidden);
   window.addEventListener("resize", () => {

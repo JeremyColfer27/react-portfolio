@@ -1,0 +1,205 @@
+/*pubsOnTap.module.css */
+
+@media screen and (min-width:1000px) {
+    
+::-webkit-scrollbar{
+    width: 8px;
+}
+
+::-webkit-scrollbar-track{
+    /* background: hsl(120 75% 75% / 1);   */
+    border-radius: 100vw;  
+
+}
+
+::-webkit-scrollbar-thumb{
+    /* background: hsl(120 100% 20% / 1);  */
+    border-radius: 100vw;
+    background: rgba(0, 0, 0, 0.366);
+}
+
+::-webkit-scrollbar-thumb:hover{
+    background: hsl(120 100% 10% / 1);
+}
+}
+
+.stupid{
+    color: green !important;
+}
+
+.expanded-project{
+    position: fixed;
+    width: 90vw;
+    height: 90vh;
+    background: rgba(11, 56, 179, 0.6); /* Use RGBA for semi-transparent background */
+    backdrop-filter: blur(20px);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5em;
+    
+    padding: 2em 1em 1em 1em;
+    border: 1px solid black;
+    z-index: 8;
+    cursor: auto;
+    border-radius: 20px;
+    transition: 0.3s;
+    animation-name: slidein;
+    animation-duration: 0.2s;
+    animation-fill-mode: backwards;
+    transform-origin: 50vw 50vh;
+
+
+}
+@keyframes slidein {
+    0%{
+        scale: 0.01;
+    }
+    100%{
+        scale: 1;
+        /* outline: 400px rgba(0, 0, 0, 0.416) solid; */
+
+    }  
+}
+
+.hidden-project{
+    display: none;
+}
+
+
+.expanded-project > * {
+    /* border: 1px solid red; */
+}
+
+.top{
+    /* position: sticky; */
+    position: relative;
+    top:0.5em;
+    width: 100%;
+    min-height: 2em;
+    text-align: center;
+    /* padding-top: 30px; */
+    padding-bottom: 30px;
+  }
+h2 {
+    font-size: 100px;
+}
+  
+  .projects-close-button.expanded-project-close-button{
+    color: grey;
+    position: absolute;
+    left: 0.75em;
+    background: none;
+    border: none;
+    text-align: left;
+    font-size: 1.45em;
+    font-weight: bold;
+  
+    top:0;
+    /* right: 0.5em; */
+  
+    cursor: pointer;
+  }
+
+.expanded-project-body{
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+    margin: 0;
+    padding: 0em 1em;
+    /* font-size: 2rem; */
+    /* border: 1px solid green; */
+    overflow: scroll;
+
+    max-width: 60em;
+
+}
+
+
+
+
+.project-headline{
+    /* max-width: 600px; */
+    display: flex;
+    gap: 0.5em;
+    padding: 0 1.5em;
+    width: 100%;
+    min-height: 150px;
+    gap:2em;
+}
+
+.project-headline > img{
+    display: block;
+    width: 50%;
+    height: auto;
+    object-fit:cover;
+}
+
+.project-headline h1{
+    /* width: 100%; */
+    text-align: center;
+    width: 50%;
+}
+
+.project-section{
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+.project-section h2{ /*INDIVIDUAL PROJECTS HEADERS, like the opoened version of the project*/
+    margin: 0;
+    padding: 0;
+}
+
+.project-main-content{
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+
+
+}
+
+.individual-project-close-container{
+    width: 100%;
+}
+/* 
+.individual-project-close-container > button{
+    font-size: 1.23em;
+    color: blue;
+    width: fit-content;
+    border: 2;
+    background: none;
+    cursor: pointer;
+} */
+
+@media screen and (max-width: 600px) {
+    .expanded-project{
+        padding:0.5em 0.5em;
+        width: 95.5vw;
+        height: 90vh;
+        gap: 0;
+    }
+
+
+    .project-headline{
+        flex-direction: column;
+        /* border: 2px solid red; */
+        padding: 1em 0;
+        gap: 1em;
+    }
+
+    .project-headline> *{
+        /* border: 2px solid green; */
+        width: 100%;
+    }
+
+    .project-headline img{
+        display: block;
+        width: 100%;
+    }
+}

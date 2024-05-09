@@ -1,10 +1,10 @@
 import React from 'react';
 import { useState } from 'react';
 
-import styles from './pubsOnTap.module.css';
+import styles from './Fluentree.module.css';
 import img from './images/dronecloud-image.png'
 import back from '../assets/back.png';
-const title = "Pubs on Tap"
+const title = "Fluentree"
 const imgAltText = "Pubs on Tap"
 const tags = ["Entrepreneurship", "Leadership", "UX"]
 const hiddenClassName = styles["expanded-project-hidden"]
@@ -42,7 +42,7 @@ function TemplatePage(props){
             <div className="expanded-project-body">
 
                 <div className={modualiseClassNames(["project-headline"])}>
-                    <h1 className={modualiseClassNames(["project.title"])}>Pubs on Tap</h1>
+                    <h1 className={modualiseClassNames(["project.title"])}>Fluentree</h1>
                     {/* <img src="./logo192.png" alt="project image" />   */}
                     <img src={img} height="9px" width="16px" alt="" />
                 </div>
