@@ -1,20 +1,49 @@
 /*pubsOnTap.module.css */
 
+@font-face {
+    font-family: 'GilroySemiBold';
+    src: url('./assets_pot/Gilroy-SemiBold.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'GilroyRegular';
+    src: url('./assets_pot/Gilroy-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'GilroyLight';
+    src: url('./assets_pot/Gilroy-Light.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'GilroyMedium';
+    src: url('./assets_pot/Gilroy-Medium.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
 @media screen and (min-width:1000px) {
-    ::-webkit-scrollbar{
+    ::-webkit-scrollbar {
+        padding-left: 10px;
         width: 8px;
     }
     
-    ::-webkit-scrollbar-track{
+    ::-webkit-scrollbar-track {
+        padding-left: 10px;
         border-radius: 100vw;  
     }
     
-    ::-webkit-scrollbar-thumb{
+    .expanded-project ::-webkit-scrollbar-thumb {
+        padding-left: 10px;
         border-radius: 100vw;
         background: rgba(0, 0, 0, 0.366);
     }
     
-    ::-webkit-scrollbar-thumb:hover{
+    ::-webkit-scrollbar-thumb:hover {
+        padding-left: 10px;
         background: hsl(0, 0%, 100%);
     }
 }
@@ -23,7 +52,7 @@
     position: fixed;
     width: 90vw;
     height: 90vh;
-    background: rgba(179, 11, 11, 0.6);
+    background: rgba(255, 255, 255, 0.5);
     backdrop-filter: blur(20px);
     top: 50%;
     left: 50%;
@@ -45,10 +74,10 @@
 }
 
 @keyframes slidein {
-    0%{
+    0% {
         scale: 0.01;
     }
-    100%{
+    100% {
         scale: 1;
     }  
 }
@@ -77,22 +106,236 @@
 .expanded-project-body {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: 10px;
-    width: 90%; /* Ensure it fills the container */
-    height: 90%; /* Ensure it fills the container */
-    border: 2px solid red;
+    gap: 15px;
+    width: 100%; /* Ensure it fills the container */
+    height: 100%; /* Ensure it fills the container */
+    max-width: 2000px;
     margin: 0;
     padding: 0; /* Remove padding */
     overflow: auto; /* Ensure scrolling if needed */
-    max-width: 60em;
+    max-width: 70em;
 }
 
-.expanded-project-body * {
-    border: 1px solid blue;
+.header_logo {
+    grid-column: span 2; /* Make this element span 2 columns */
+    width: 100%;
+    position: relative; /* Ensure absolute positioning is relative to this container */
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-.debug-item {
-    background-color: lightgrey;
+.header_logo img {
+    width: 100%; /* Make the images take the full width of the container */
+    height: auto; /* Maintain the aspect ratio */
+    object-fit: cover; /* Cover the container while maintaining aspect ratio */
+    border-radius: 15px; /* Apply rounded corners */
+}
+
+.header_logo img:last-child {
+    position: absolute; /* Overlay the last image (logo) */
+}
+
+.header_image {
+    grid-column: span 2; /* Make this element span 2 columns */
+    width: 100%;
+    position: relative; /* Ensure absolute positioning is relative to this container */
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.header_image img {
+    width: 100%; /* Make the images take the full width of the container */
+    height: auto; /* Maintain the aspect ratio */
+    object-fit: cover; /* Cover the container while maintaining aspect ratio */
+    border-radius: 15px; /* Apply rounded corners */
+}
+
+.intro {
+    grid-column: span 3;
+    background-color: #1A6F79;
+    border-radius: 15px;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    color: white;
+    font-size: 1.5rem;
+    font-family: 'GilroySemiBold', sans-serif; /* Apply the custom font */
+    display: flex;
+    align-items: center;
+}
+
+.second_image {
+    grid-column: span 1; /* Make this element span 1 column */
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%; /* Match the height of the intro cell */
+}
+
+.second_image img {
+    width: 100%; /* Make the image a square */
+    height: 100%;
+    object-fit: cover; /* Ensure the image covers the container */
+    border-radius: 15px; /* Apply rounded corners */
+}
+
+.description {
+    grid-column:  span 2;
+    grid-row: span 2;
+
+    background-color: #3E8F8A;
+    border-radius: 15px;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    color: white;
+    font-size: 1rem;
+    font-family: 'GilroyRegular';
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+   
+}
+
+
+.reviews {
+    grid-column: span 2;
+    background-color: #D3E4E6; /* light blue-green background */
+    padding: 15px;
+    padding-bottom: 15px;
+    border-radius: 15px;
+    font-family: 'GilroyRegular', sans-serif; /* Apply the custom font */
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.reviews h2 {
+    font-family: 'GilroyMedium';
+    font-size: 1em;
+}
+
+.singleReview {
+    background-color: #F1F8F8; /* light grey background */
+    border-radius: 15px;
     padding: 10px;
-    box-sizing: border-box; /* Ensure padding doesn't affect width */
+    display: flex;
+    align-items: center;
+    /* margin-bottom: 10px; */
+}
+
+.singleReview img {
+    height: 50px; /* Set the desired height of the profile image */
+    width: 50px; /* Set the desired width of the profile image */
+    margin-right: 5px;
+}
+
+
+
+.reviewText {
+    font-family: 'GilroyRegular';
+    font-size: 1em;
+}
+
+.reviewStars {
+    color: #ffd000; /* gold color for stars */
+    margin-top: 5px;
+}
+
+.reviewDetails {
+    padding: 5px;
+    font-family: 'GilroyLight';
+    text-align: right;
+    font-size: 0.6em;
+    color: #555; /* dark grey text */
+    line-height: 1.4em;
+    text-align: right;
+    margin-left: auto; /* Align to the right */
+
+
+}
+
+.accomplishments {
+    grid-column:  span 2;
+    display: flex;
+    justify-content: space-around;
+    background-color: #5F919C; /* Set the background color to the bluish shade */
+    padding: 20px;
+    border-radius: 20px;
+}
+
+.accomplishment {
+
+    background-color: transparent; /* Set the background to transparent */
+    border: 3px solid #D3E4E6; /* Add a border */
+    border-radius: 15px;
+    padding: 10px;
+    text-align: center;
+    width: 30%;
+}
+
+.icon {
+    width: 50px; /* Set the desired width of the icons */
+    height: 50px; /* Set the desired height of the icons */
+    margin-bottom: 10px; /* Add some space between the icon and the text */
+}
+
+.accomplishment p {
+    font-family: 'GilroyMedium', sans-serif;
+    font-size: 1rem;
+    color: #D3E4E6;
+    margin: 0;
+}
+
+
+
+
+.schematics {
+    grid-column: span 4;
+    border-radius: 15px;
+    background-color: #AADBCF; /* light blue-green background */
+
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: nowrap;  /* No wrapping of images */
+    gap: 20px; /* Adjust the gap between images */
+    padding: 20px;
+
+}
+
+.schematics img {
+    border-radius: 20px;
+    height: auto;
+    width: 18%;  /* Adjust the width as needed */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Optional: add some shadow */
+}
+
+.extraInfo {
+    grid-column: span 4;
+    text-align: center; /* Center the text horizontally */
+    margin: 20px 0; /* Optional: Add some margin */
+    color: white;
+
+}
+
+.extraInfo a {
+    font-family: 'GilroyMedium', sans-serif;
+    font-size: 1rem;
+    color: #ffffff; /* Default link color */
+    text-decoration: none; /* Remove underline */
+}
+
+.extraInfo a:hover {
+    text-decoration: underline; /* Underline on hover */
 }
