@@ -16,15 +16,18 @@ import fluentree from './projects/Fluentree'
 function App() {
   const [projects, setProjects] = useState([pot, fluentree, generic, generic, generic, generic, generic, generic])
   const [projectsHidden, setProjectsHidden] = useState(projects.map(p => {return {project: p, isHidden: true}}))
-  console.log(projectsHidden);
-  window.addEventListener("resize", () => {
-    document.documentElement.setAttribute("style", `--viewport-height: ${(window.innerHeight).toString()}px`);
-  })
+  const [isProjectOpen, setIsProjectOpen] = useState(false);
 
   useEffect(() => {
     const gradient = new Gradient();
     gradient.initGradient('#gradient-canvas');
   }, [])
+
+  //adds a class to projects page to indicate whether any project is open
+  useEffect(() => {
+    if(isProjectOpen) document.getElementById("projects-page").classList.add("project-open");
+    else document.getElementById("projects-page").classList.remove("project-open");
+  }, [isProjectOpen])
 
   useEffect(() => {
     console.log(window.innerHeight);
@@ -108,6 +111,7 @@ function App() {
                 onClick = {e => {; 
                 console.log("project toggled");
                 setProjectsHidden(projectsHidden.map((p,index) => {
+                  setIsProjectOpen(true);
                   if (index == i){
                     const newP = p;
                     newP.isHidden = !p.isHidden
@@ -125,7 +129,7 @@ function App() {
                 containerClasses={["expanded-project"]}
                 // closeFunction={{id: `project-${i.toString()}`, classToToggle:"hidden-project"}}
                 closeFunction = {e => setProjectsHidden(projectsHidden.map((p, index) => {
-
+                  setIsProjectOpen(false);
                   if (index == i){
                     const newP = projects[i];
                     newP.isHidden = !projects[i].isHidden;
