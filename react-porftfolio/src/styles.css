@@ -175,8 +175,8 @@ body {
 }
 
 .project-open{
-  border: 5px solid red;
-  background-color: red;
+  /* border: 5px solid red;
+  background-color: red; */
 }
 
 .projects-backdrop{

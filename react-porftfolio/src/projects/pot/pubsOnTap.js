@@ -65,7 +65,7 @@ function TemplatePage(props) {
             </div>
 
             <div className={styles["expanded-project-body"]}>
-
+                    
                 
                 <div className={styles["header_logo"]}>
                     <img src={potGradient1}></img>
