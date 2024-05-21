@@ -49,11 +49,12 @@
 }
 
 .expanded-project {
+    z-index: 100;
     position: fixed;
     width: 90vw;
     height: 90vh;
     background: rgba(255, 255, 255, 0.5);
-    /* backdrop-filter: blur(20px); */
+    backdrop-filter: blur(20px);
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -63,7 +64,7 @@
     gap: 0.5em;
     padding: 2em 1em 1em 1em;
     border: 1px solid rgb(255, 255, 255);
-    z-index: 8;
+    
     cursor: auto;
     border-radius: 20px;
     transition: 0.3s;
@@ -71,21 +72,6 @@
     animation-duration: 0.2s;
     animation-fill-mode: backwards;
     transform-origin: 50vw 50vh;
-}
-
-.expanded-project::after{
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(36, 36, 36, 0.203);
-    opacity: 0.7;
-    z-index: -1;
-    /* filter: blur(10px); */
-    backdrop-filter: blur(10px);
-    overflow: auto; 
 }
 
 @keyframes slidein {
@@ -100,41 +86,74 @@
 .hidden-project {
     display: none;
 }
-
+/* Adjustments for alignment */
 .top {
-    position: relative;
-    top: 0.5em;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
     width: 100%;
     min-height: 2em;
-    text-align: center;
-    padding-bottom: 30px;
+    padding-bottom: 15px;
+    position: relative;
 }
 
-.projects-close-button.expanded-project-close-button {
-    position: absolute;
-    left: 0.75em;
+.back_button, .close_button {
     background: none;
-    border: none;      
+    border: none;
     cursor: pointer;
+    display: flex;
+    align-items: center;
+    padding: 0;
+    margin: 0 1.5em;
+    height: 100%;
+}
+
+.back_button img, .close_button img {
+    height: 1.8em;
+    width: auto;
+}
+
+.tags {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 5px;
+    flex-grow: 1;
+    margin: 0 1.5em;
+}
+
+.tag {
+    background-color: transparent;
+    border: 1px solid #ffffff;
+    border-radius: 100px;
+    padding: 5px 10px;
+    margin: 5px;
+    font-family: 'GilroyLight', sans-serif;
+    color: white;
+    font-size: 0.8rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 2em;
+    line-height: 1.5;
 }
 
 .expanded-project-body {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 15px;
-    width: 100%; /* Ensure it fills the container */
-    height: 100%; /* Ensure it fills the container */
+    width: calc(100% - 3em); /* Full width minus side margins */
+    max-width: 80em;
+    margin: 0 1.5em; /* Same horizontal margin as .tags for alignment */
+    padding: 0;
+    overflow: auto;
     max-width: 2000px;
-    margin: 0;
-    padding: 0; /* Remove padding */
-    overflow: auto; /* Ensure scrolling if needed */
-    max-width: 70em;
 }
 
 .header_logo {
-    grid-column: span 2; /* Make this element span 2 columns */
+    grid-column: span 2;
     width: 100%;
-    position: relative; /* Ensure absolute positioning is relative to this container */
+    position: relative;
     box-sizing: border-box;
     display: flex;
     justify-content: center;
@@ -142,20 +161,20 @@
 }
 
 .header_logo img {
-    width: 100%; /* Make the images take the full width of the container */
-    height: auto; /* Maintain the aspect ratio */
-    object-fit: cover; /* Cover the container while maintaining aspect ratio */
-    border-radius: 15px; /* Apply rounded corners */
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 15px;
 }
 
 .header_logo img:last-child {
-    position: absolute; /* Overlay the last image (logo) */
+    position: absolute;
 }
 
 .header_image {
-    grid-column: span 2; /* Make this element span 2 columns */
+    grid-column: span 2;
     width: 100%;
-    position: relative; /* Ensure absolute positioning is relative to this container */
+    position: relative;
     box-sizing: border-box;
     display: flex;
     justify-content: center;
@@ -163,73 +182,61 @@
 }
 
 .header_image img {
-    width: 100%; /* Make the images take the full width of the container */
-    height: auto; /* Maintain the aspect ratio */
-    object-fit: cover; /* Cover the container while maintaining aspect ratio */
-    border-radius: 15px; /* Apply rounded corners */
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 15px;
 }
 
 .intro {
     grid-column: span 3;
     background-color: #1A6F79;
     border-radius: 15px;
-    padding-left: 30px;
-    padding-right: 30px;
-    padding-top: 40px;
-    padding-bottom: 40px;
+    padding: 40px 30px;
     color: white;
     font-size: 1.5rem;
-    font-family: 'GilroySemiBold', sans-serif; /* Apply the custom font */
+    font-family: 'GilroySemiBold', sans-serif;
     display: flex;
     align-items: center;
 }
 
 .second_image {
-    grid-column: span 1; /* Make this element span 1 column */
+    grid-column: span 1;
     width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100%; /* Match the height of the intro cell */
+    height: 100%;
 }
 
 .second_image img {
-    width: 100%; /* Make the image a square */
+    width: 100%;
     height: 100%;
-    object-fit: cover; /* Ensure the image covers the container */
-    border-radius: 15px; /* Apply rounded corners */
+    object-fit: cover;
+    border-radius: 15px;
 }
 
 .description {
-    grid-column:  span 2;
+    grid-column: span 2;
     grid-row: span 2;
-
     background-color: #3E8F8A;
     border-radius: 15px;
-    padding-left: 30px;
-    padding-right: 30px;
-    padding-top: 40px;
-    padding-bottom: 40px;
+    padding: 40px 30px;
     color: white;
     font-size: 1rem;
     font-family: 'GilroyRegular';
-    
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-
-   
 }
-
 
 .reviews {
     grid-column: span 2;
-    background-color: #D3E4E6; /* light blue-green background */
+    background-color: #D3E4E6;
     padding: 15px;
-    padding-bottom: 15px;
     border-radius: 15px;
-    font-family: 'GilroyRegular', sans-serif; /* Apply the custom font */
+    font-family: 'GilroyRegular', sans-serif;
     display: flex;
     flex-direction: column;
     gap: 10px;
@@ -241,21 +248,18 @@
 }
 
 .singleReview {
-    background-color: #F1F8F8; /* light grey background */
+    background-color: #F1F8F8;
     border-radius: 15px;
     padding: 10px;
     display: flex;
     align-items: center;
-    /* margin-bottom: 10px; */
 }
 
 .singleReview img {
-    height: 50px; /* Set the desired height of the profile image */
-    width: 50px; /* Set the desired width of the profile image */
+    height: 50px;
+    width: 50px;
     margin-right: 5px;
 }
-
-
 
 .reviewText {
     font-family: 'GilroyRegular';
@@ -263,7 +267,7 @@
 }
 
 .reviewStars {
-    color: #ffd000; /* gold color for stars */
+    color: #ffd000;
     margin-top: 5px;
 }
 
@@ -272,27 +276,23 @@
     font-family: 'GilroyLight';
     text-align: right;
     font-size: 0.6em;
-    color: #555; /* dark grey text */
+    color: #555;
     line-height: 1.4em;
-    text-align: right;
-    margin-left: auto; /* Align to the right */
-
-
+    margin-left: auto;
 }
 
 .accomplishments {
-    grid-column:  span 2;
+    grid-column: span 2;
     display: flex;
     justify-content: space-around;
-    background-color: #5F919C; /* Set the background color to the bluish shade */
+    background-color: #5F919C;
     padding: 20px;
     border-radius: 20px;
 }
 
 .accomplishment {
-
-    background-color: transparent; /* Set the background to transparent */
-    border: 3px solid #D3E4E6; /* Add a border */
+    background-color: transparent;
+    border: 3px solid #D3E4E6;
     border-radius: 15px;
     padding: 10px;
     text-align: center;
@@ -300,9 +300,9 @@
 }
 
 .icon {
-    width: 50px; /* Set the desired width of the icons */
-    height: 50px; /* Set the desired height of the icons */
-    margin-bottom: 10px; /* Add some space between the icon and the text */
+    width: 50px;
+    height: 50px;
+    margin-bottom: 10px;
 }
 
 .accomplishment p {
@@ -312,45 +312,39 @@
     margin: 0;
 }
 
-
-
-
 .schematics {
     grid-column: span 4;
     border-radius: 15px;
-    background-color: #AADBCF; /* light blue-green background */
-
+    background-color: #AADBCF;
     display: flex;
     justify-content: space-around;
     align-items: center;
-    flex-wrap: nowrap;  /* No wrapping of images */
-    gap: 20px; /* Adjust the gap between images */
+    flex-wrap: nowrap;
+    gap: 20px;
     padding: 20px;
-
 }
 
 .schematics img {
     border-radius: 20px;
     height: auto;
-    width: 18%;  /* Adjust the width as needed */
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Optional: add some shadow */
+    width: 15%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .extraInfo {
     grid-column: span 4;
-    text-align: center; /* Center the text horizontally */
-    margin: 20px 0; /* Optional: Add some margin */
+    text-align: center;
+    margin: 20px 0;
     color: white;
-
 }
 
 .extraInfo a {
     font-family: 'GilroyMedium', sans-serif;
     font-size: 1rem;
-    color: #ffffff; /* Default link color */
-    text-decoration: none; /* Remove underline */
+    color: #ffffff;
+    text-decoration: none;
 }
 
 .extraInfo a:hover {
-    text-decoration: underline; /* Underline on hover */
+    text-decoration: underline;
 }

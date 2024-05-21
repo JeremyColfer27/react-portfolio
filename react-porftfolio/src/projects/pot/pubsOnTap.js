@@ -2,10 +2,7 @@ import React from 'react';
 import { useState } from 'react';
 import styles from './pubsOnTap.module.css';
 import img from './assets_pot/pot_header.jpg'
-import header_img from './assets_pot/pot_header.jpg'
-import back from '../../assets/back.png';
 import potGradient1 from './assets_pot/pot_gradient1.jpg';
-import potGradient2 from './assets_pot/pot_gradient2.jpg';
 import logoHeader from './assets_pot/logo_header.png';
 import landing from './assets_pot/landing.jpg';
 import pints from './assets_pot/pints.jpg';
@@ -19,12 +16,13 @@ import pcp from './assets_pot/Pub Crawl Planner.png';
 import whatsOn from './assets_pot/Whats on Filters.png';
 import review from './assets_pot/review.png';
 import profile from './assets_pot/profile.png';
+import back_white from '../../assets/back_white.png';
+import close from '../../assets/close_white.png';
 
 const title = "Pubs on Tap"
 const imgAltText = "Pubs on Tap"
 const tags = ["Entrepreneurship", "Leadership", "UX"]
 const hiddenClassName = styles["expanded-project-hidden"]
-console.log("Styles", styles)
 
 function TemplatePage(props) {
     const [hidden, toggleHidden] = useState(props.hidden);
@@ -47,14 +45,28 @@ function TemplatePage(props) {
     return (
         <div className={modualiseClassNames(["expanded-project"]) + (props.hidden ? modualiseClassNames(["hidden-project"]) : "") + (props.containerClasses == null ? "" : modualiseClassNames(props.containerClasses))}>
             <div className={modualiseClassNames(["top", "expanded-project-top"])}>
-                <button className={modualiseClassNames(['projects-close-button', "expanded-project-close-button"])}
+                <button className={styles["back_button"]}
                     onClick={e => { e.stopPropagation(); closeFunction() }}
                 >
-                    <img className="close-button" src={back} alt="close window icon" />
+                    <img className="close-button" src={back_white} alt="close window icon" />
+                </button>
+
+                <div className={styles["tags"]}>
+                    {tags.map((tag, index) => (
+                        <span key={index} className={styles["tag"]}>{tag}</span>
+                    ))}
+                </div>
+
+                <button className={styles["close_button"]}
+                    onClick={e => { e.stopPropagation(); closeFunction() }}
+                >
+                    <img className="close-button" src={close} alt="close window icon" />
                 </button>
             </div>
 
             <div className={styles["expanded-project-body"]}>
+
+                
                 <div className={styles["header_logo"]}>
                     <img src={potGradient1}></img>
                     <img src={logoHeader} alt="Pubs on Tap"></img>
@@ -130,6 +142,7 @@ function TemplatePage(props) {
                 <div className={styles.schematics}>
                  <img src={home} alt="A screenshot of Pubs on Tap's home screen"/>
                  <img src={leaderboard} alt="A screenshot of Pubs on Tap's leaderboard page"/>
+                 <img src={whatsOn} alt="A screenshot of Pubs on Tap's What's On page"/>
                  <img src={pcp} alt="A screenshot of Pubs on Tap's Pub Crawl Planner feature"/>
                  <img src={review} alt="A screenshot of Pubs on Tap's reviewing system"/>
                  <img src={profile} alt="A screenshot of Pubs on Tap's profile page"/>
