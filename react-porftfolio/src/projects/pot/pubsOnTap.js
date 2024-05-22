@@ -58,8 +58,7 @@ function TemplatePage(props) {
                 </div>
 
                 <button className={styles["close_button"]}
-                    onClick={e => { e.stopPropagation(); closeFunction() }}
-                >
+                onClick={() => document.getElementById("projects-page").classList.toggle("hidden")}                >
                     <img className="close-button" src={close} alt="close window icon" />
                 </button>
             </div>

@@ -1,7 +1,7 @@
 import React from 'react';
 import { useState } from 'react';
 import logo from './logo.svg';
-import close from './assets/close.png';
+import close from './assets/close_white.png';
 
 import './App.css';
 import './styles.css'
@@ -36,6 +36,8 @@ function App() {
 
   }, [])
 
+  
+
   return ( 
     <div onClick={() => {}}>
 
@@ -68,6 +70,8 @@ function App() {
       <button type="button">Contact</button>
     </div>
   </div>
+
+  
 
       
 
@@ -114,7 +118,7 @@ function App() {
                   setIsProjectOpen(true);
                   if (index == i){
                     const newP = p;
-                    newP.isHidden = !p.isHidden
+                    newP.isHidden = !p.isHidden;
                     return newP
                   }
                   else return p;  
