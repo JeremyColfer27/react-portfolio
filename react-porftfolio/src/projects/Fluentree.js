@@ -3,7 +3,7 @@ import { useState } from 'react';
 
 import styles from './Fluentree.module.css';
 import img from './images/dronecloud-image.png'
-import back from '../assets/back.png';
+import back from '../assets/back_black.png';
 const title = "Fluentree"
 const imgAltText = "Pubs on Tap"
 const tags = ["Entrepreneurship", "Leadership", "UX"]
