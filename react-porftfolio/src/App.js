@@ -17,6 +17,47 @@ function App() {
   const [projects, setProjects] = useState([pot, fluentree, generic, generic, generic, generic, generic, generic])
   const [projectsHidden, setProjectsHidden] = useState(projects.map(p => {return {project: p, isHidden: true}}))
   const [isProjectOpen, setIsProjectOpen] = useState(false);
+  const [message, setMessage] = useState("this is the default message");
+  const [email, setEmail] = useState("jeremycolfer03@gmail.com");
+  const [name, setName] = useState("default name");
+  
+  const enableMessageSend = true;
+
+  const API_BASE = "https://cssfantasyapi.onrender.com";
+  // const API_BASE = "http://localhost:3001";
+
+  //API call for sening a message
+  const sendMessage = async() => {
+    const messageContent = document.getElementById("message-content").value;
+    const messageName = document.getElementById("message-name").value;
+    const messageReturnEmail = document.getElementById("message-return-email").value;
+
+    if(enableMessageSend){
+      const response  = await fetch(API_BASE+"/admin/email", {
+        method: "POST",
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body:JSON.stringify({
+          "for": "Jeremycolfer03@gmail.com",
+          "message": messageContent,
+          "email": messageReturnEmail,
+          "name": messageName
+        })
+    }).then(res => res.json()).then(res => {
+        console.log(res.message);
+        if(!res.error){
+          handleSuccessfulMessage();
+        }
+        else{
+          handleUnsuccessfulMessage();
+        }
+    }).catch(e => console.log(e));
+  }
+  else{
+    window.alert("messaging currently unavailable. Apologies.")
+  }
+}
 
   useEffect(() => {
     const gradient = new Gradient();
@@ -36,7 +77,15 @@ function App() {
 
   }, [])
 
-  
+  //runs after receiving confirmation that email has been sent
+  const handleSuccessfulMessage = () => {
+    window.alert("Your message has been received, thank you!")
+  }
+
+    //runs when email sending has caused an error
+    const handleUnsuccessfulMessage = () => {
+      window.alert("Your message couldn't be received please try again")
+    }
 
   return ( 
     <div onClick={() => {}}>
@@ -67,11 +116,31 @@ function App() {
       <button type="button"
         onClick = {() => document.getElementById("projects-page").classList.toggle("hidden")}
       >Projects</button>
-      <button type="button">Contact</button>
+      <button type="button" onClick={() => document.getElementById("contact-form").classList.remove("hidden")}>Contact</button>
+
     </div>
   </div>
 
   
+
+  <div id="contact-form"className="contact-form hidden">
+        <div className="form-container name-container">
+          <label htmlFor="message-name">Your name</label>
+          <input id="message-name" type="text" />
+        </div>
+
+        <div className="form-container content-container">
+          <label htmlFor="message-content">Message</label>
+          <textarea id="message-content" type="text"/>
+        </div>
+
+        <div className="form-container return-email-container">
+          <label htmlFor="message-return-email">Your email</label>
+          <input id="message-return-email" type="text" />
+        </div>
+
+        <button onClick={async () => await sendMessage()}>Send Message</button>
+  </div>
 
       
 
