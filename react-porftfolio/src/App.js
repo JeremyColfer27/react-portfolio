@@ -39,7 +39,8 @@ function App() {
           'Content-Type': 'application/json'
         },
         body:JSON.stringify({
-          "for": "Jeremycolfer03@gmail.com",
+          "for": "liamjones73@outlook.com",
+          // "for": "Jeremycolfer03@gmail.com",
           "message": messageContent,
           "email": messageReturnEmail,
           "name": messageName
