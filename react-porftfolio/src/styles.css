@@ -132,7 +132,7 @@ body {
     max-width: 100vw;
   }
 
-  .buttons button{
+  .buttons button, .about-buttons-container button{
     background: none;
     color: #adadad;
     border-radius:100px;
@@ -142,6 +142,71 @@ body {
     mix-blend-mode: color-dodge;
     cursor: pointer;
     font-size: 0.85em;
+  }
+
+  #about-page{
+    position: fixed;
+    width: 90vw;
+    height: 90vh;
+    top:50%;
+    left:50%;
+    padding: 2em;
+
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap:5em;
+
+    color: white;
+
+    border-radius: 20px;
+    backdrop-filter: blur(20px);
+
+    background-color: rgba(191, 191, 191, 0.50);
+
+  }
+
+  #about-page.hidden{
+    display: none;
+
+  }
+
+  .about-title{
+    font-size: 3.25em;
+  }
+
+  .about-container{
+    max-width: 1000px;
+    display: flex;
+    flex-direction: column;
+    gap:3em;
+  }
+
+  .about-image-container{
+    background-color: white;
+    border-radius: 20px;
+    display: flex;
+    justify-content: start;
+  }
+
+  .about-content{
+    display: grid;
+    grid-template-columns: 2fr 3fr;
+    gap:5em;
+  }
+
+  .about-text-content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap:2em;
+  }
+
+  .about-buttons-container{
+    display: flex;
+    gap: 3em;
   }
 
   .contact-form{
@@ -272,9 +337,15 @@ body {
 
 .project-open{
   /* border: 5px solid red;
-  background-color: red; */
-
+  background-color: none; */
 }
+
+.project-open .top{
+  filter: blur(5px);
+}
+
+
+
 
 .projects-backdrop {
   position: absolute;
