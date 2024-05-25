@@ -113,13 +113,44 @@ function App() {
     </div>
 
     <div className="buttons">
-      <button type="button">About</button>
+      <button type="button" onClick={() => {document.getElementById("about-page").classList.remove("hidden")}}>About</button>
       <button type="button"
         onClick = {() => document.getElementById("projects-page").classList.toggle("hidden")}
       >Projects</button>
       <button type="button" onClick={() => document.getElementById("contact-form").classList.remove("hidden")}>Contact</button>
 
     </div>
+  </div>
+
+  <div id="about-page" className="about-page hidden">
+    <div className="about-container">
+
+    <h2 className="about-title">About Me</h2>
+    <div className="about-content">
+      <div className="about-image-container">
+        <img className="about-image" alt='a picture of me'></img>
+      </div>
+
+      <div className="about-text-content">
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur, adipisci enim. Cumque aut odit quasi. Repellendus dolore ex soluta quam, sit temporibus placeat mollitia. Eligendi veritatis culpa, laudantium dolorum hic amet iusto voluptas repellendus sequi eos, veniam, nostrum cumque repudiandae.</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. In ipsum distinctio, accusantium, labore iste nemo mollitia totam optio sequi molestias eius blanditiis. Dolores ipsa quia molestias ad officia non eius tempore, suscipit fugit? Rerum, temporibus?</p>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Autem voluptas molestias ex perferendis accusamus inventore.</p>
+        <div className="about-buttons-container">
+          <button className='button' onClick={() => {
+            document.getElementById("about-page").classList.add("hidden")
+            document.getElementById("projects-page").classList.toggle("hidden"); 
+                                                           }}>Projects</button>
+          <button className='button' onClick={() => document.getElementById("contact-form").classList.remove("hidden")}>Contact</button>
+        </div>
+      </div>
+    </div>
+
+
+
+    </div>
+
+
+
   </div>
 
   
