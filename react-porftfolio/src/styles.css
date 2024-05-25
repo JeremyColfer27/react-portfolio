@@ -147,10 +147,6 @@ body {
   .contact-form{
     z-index: 3;
 
-    border: 1px solid white;
-    background-color: rgba(255, 255, 255, 0.5);
-    backdrop-filter: blur(10px);
-
     width: 25em;
 
     position: fixed;
@@ -161,39 +157,40 @@ body {
     padding: 2em;
     border-radius: 10px;
 
+    color: white;
+
     display: flex;
     flex-direction: column;
     gap:2em;
     align-items: center;
 
-    border-radius: 20px;
-
-    transition: 0.3s;
-    
+    background: black;
   }
 
   .form-container{
     display: flex;
     flex-direction: column;
     gap:0.25em;
-    background: none;
-    border: 1px solid white;
-    color: white;
-    border-radius: 15px;
-    padding: 0.75em;
-    width: 100%;
-  }
 
-  .contact-form h2 {
-    font-size: 1.8rem;
-    font-family: "Big Shoulders Display", sans-serif;
+    /* background-color: rgb(132, 132, 231); */
+    border: 2px solid white;
+    color: white;
+    border-radius: 20px;
+
+    padding: 0.75em;
+
+    width: 100%;
   }
 
   .form-container input{
     /* height:2.5em; */
     width: 100%;
+
     text-align: start;
+
     color: white;
+
+
     border: none;
     background: none;
   }
@@ -205,6 +202,7 @@ body {
 
   .form-container:hover label{
     font-size: 0.8em;
+
   }
 
   #message-content{
@@ -228,7 +226,6 @@ body {
       width: 100%;
       background-color: white;
 
-      border: 2px solid rgb(213, 0, 0);
 
       padding:0.5em;
       border: none;
@@ -236,13 +233,10 @@ body {
 
       cursor: pointer;
   }
-  
-  .contact-form sendButton {
-    display: none;
-  }
 
 
   .contact-form.hidden{
+
     display: none;
   }
 
@@ -338,7 +332,7 @@ body {
   font-size: 40px;
 }
 
-.close-button{
+.projects-close-button{
   color: rgb(92, 92, 92);
   position: absolute;
   right: 0em;

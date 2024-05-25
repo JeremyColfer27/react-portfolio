@@ -56,7 +56,7 @@ function App() {
     }).catch(e => console.log(e));
   }
   else{
-    window.alert("Message failed to send. Apoligies 😬. Please email me (liamjones73@outlook.com) at let me know my website is broken.")
+    window.alert("messaging currently unavailable. Apologies.")
   }
 }
 
@@ -80,12 +80,12 @@ function App() {
 
   //runs after receiving confirmation that email has been sent
   const handleSuccessfulMessage = () => {
-    window.alert("Your message has been sent, thank you! 😊")
+    window.alert("Your message has been received, thank you!")
   }
 
     //runs when email sending has caused an error
     const handleUnsuccessfulMessage = () => {
-      window.alert("Your message couldn't be received please try again. 🙁")
+      window.alert("Your message couldn't be received please try again")
     }
 
   return ( 
@@ -114,7 +114,9 @@ function App() {
 
     <div className="buttons">
       <button type="button">About</button>
-      <button type="button" onClick = {() => document.getElementById("projects-page").classList.toggle("hidden")}>Projects</button>
+      <button type="button"
+        onClick = {() => document.getElementById("projects-page").classList.toggle("hidden")}
+      >Projects</button>
       <button type="button" onClick={() => document.getElementById("contact-form").classList.remove("hidden")}>Contact</button>
 
     </div>
@@ -123,16 +125,6 @@ function App() {
   
 
   <div id="contact-form"className="contact-form hidden">
-
-    <div className="top">
-        <h2 className='header'>CONTACT</h2>
-        <button className='close-button'
-        onClick={() => document.getElementById("contact-form").classList.toggle("hidden")}
-        >
-          <img className="close-button" src={close} alt="close window icon" />
-        </button>
-      </div>
-
         <div className="form-container name-container">
           <label htmlFor="message-name">Your name</label>
           <input id="message-name" type="text" />
@@ -148,7 +140,7 @@ function App() {
           <input id="message-return-email" type="text" />
         </div>
 
-        <button  className="send-button" onClick={async () => await sendMessage()}>Send Message</button>
+        <button onClick={async () => await sendMessage()}>Send Message</button>
   </div>
 
       
@@ -159,8 +151,8 @@ function App() {
         
       </div>
       <div className="top">
-        <h2 className='header'>PROJECTS</h2>
-        <button className='close-button'
+        <h2 className='projects-header'>PROJECTS</h2>
+        <button className='projects-close-button'
         onClick={() => document.getElementById("projects-page").classList.toggle("hidden")}
         >
           <img className="close-button" src={close} alt="close window icon" />
