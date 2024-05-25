@@ -125,6 +125,16 @@ function App() {
   
 
   <div id="contact-form"className="contact-form hidden">
+
+      <div className="top">
+        <h2 className='contact-header'>CONTACT</h2>
+        <button className='contact-close-button'
+        onClick={() => document.getElementById("contact-form").classList.add("hidden")}
+        >
+          <img className="close-button" src={close} alt="close window icon" />
+        </button>
+      </div>
+
         <div className="form-container name-container">
           <label htmlFor="message-name">Your name</label>
           <input id="message-name" type="text" />
@@ -140,7 +150,14 @@ function App() {
           <input id="message-return-email" type="text" />
         </div>
 
-        <button onClick={async () => await sendMessage()}>Send Message</button>
+
+      {/* <button className='send-button-new'>New Send Button</button> */}
+
+      {/* <a href="#" id="btn-gra" class="btn-gra">hover me</a> */}
+
+       <button id="btn-gra" class="btn-gra">hover me</button>
+
+        <button className="send-button" onClick={async () => await sendMessage()}>Send Message</button>
   </div>
 
       

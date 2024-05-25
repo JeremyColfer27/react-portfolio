@@ -155,7 +155,8 @@ body {
     transform: translate(-50%, -50%);
 
     padding: 2em;
-    border-radius: 10px;
+    border-radius: 15px;
+    border: 1px white solid;
 
     color: white;
 
@@ -164,7 +165,34 @@ body {
     gap:2em;
     align-items: center;
 
-    background: black;
+    background-color: rgba(191, 191, 191, 0.7);
+ 
+    backdrop-filter: blur(5px);
+
+  }
+
+  .contact-close-button{
+    color: rgb(92, 92, 92);
+    position: absolute;
+    right: 0em;
+    background: none;
+    border: none;
+    text-align: left;
+    font-size: 1.45em;
+    font-weight: bold;
+    top:0;
+    cursor: pointer;
+  }
+  
+  .contact-header{
+    display: block;
+    padding: 0;
+    margin: 0;
+  }
+
+  .contact-form h2 {
+    font-size: 1.8rem;
+    font-family: "Big Shoulders Display", sans-serif;
   }
 
   .form-container{
@@ -173,7 +201,7 @@ body {
     gap:0.25em;
 
     /* background-color: rgb(132, 132, 231); */
-    border: 2px solid white;
+    border: 1px solid white;
     color: white;
     border-radius: 20px;
 
@@ -207,6 +235,7 @@ body {
 
   #message-content{
     /* height: 8em; */
+    color: white;
     height: 5em;
     background: none;
     border: none;
@@ -220,15 +249,16 @@ body {
     outline: none;
   }
 
-  .contact-form button{
-      width: fit-content;
-      height: 2em;
+  .contact-form .send-button{
       width: 100%;
-      background-color: white;
+      height: 3em;
+      color: white;
+      background: none;
+      background-blend-mode:color-dodge;
 
 
       padding:0.5em;
-      border: none;
+      border: 1px white solid;
       border-radius: 20px;
 
       cursor: pointer;
@@ -239,6 +269,69 @@ body {
 
     display: none;
   }
+
+ 
+
+  #btn-gra{
+    position: relative;
+    height: 2em;
+    width: 100%;
+    font-family: sans-serif;
+    text-align: center;
+    text-decoration: none;
+    line-height: 60px;
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 24px;
+    box-sizing: border-box;
+    background: linear-gradient(90deg, #03a9f4, #f441a5, #ffeb3b, #03a9f4);
+    background-size: 400%;
+    border-radius: 30px;
+    z-index: 1;
+  }
+  
+  #btn-gra:hover{
+    color: #fff;
+    text-decoration: none;
+    animation: animate 8s linear infinite;
+  }
+  
+  @keyframes animate
+  {
+    0%
+    {
+      background-position: 0%;
+    }
+    100%
+    {
+      background-position: 400%;
+    }
+  }
+  
+  #btn-gra:before{
+    content: '';
+    position: absolute;
+    top: -5px;
+    left: -5px;
+    bottom: -5px;
+    right: -5px;
+    z-index: -1;
+    background: linear-gradient(90deg, #03a9f4, #f441a5, #ffeb3b, #03a9f4);
+    background-size: 400%;
+    border-radius: 40px;
+    filter: blur(20px);
+    opacity: 0;
+    transition: 0.5s;
+  }
+  
+  #btn-gra:hover:before{
+    filter: blur(20px);
+    opacity: 1;
+    animation: animate 8s linear infinite;
+  }
+
+
+
 
   h1 {
     display: flex;
