@@ -10,6 +10,10 @@ import {useEffect} from 'react'
 import generic from './projects/TemplatePage'
 import pot from './projects/pot/pubsOnTap'
 import fluentree from './projects/Fluentree'
+import linkedin from './assets/linkedin_w.png';
+import email_w from './assets/email_w.png';
+import github from './assets/github_w.png';
+import whatsapp from './assets/whatsapp_w.png';
 
 
 
@@ -166,6 +170,28 @@ function App() {
         </button>
       </div>
 
+      <div className="socials">
+
+      <a href="https://www.linkedin.com/in/liam--jones" target="_blank" rel="noopener noreferrer">
+        <img src={linkedin} alt="Open my Linkedin Profile" />
+      </a>
+
+      <a href="mailto:liamjones73@outlook.com" target="_blank" rel="noopener noreferrer">
+        <img src={email_w} alt="Send me an Email" />
+      </a>
+
+      <a href="https://github.com/liam-jones-2002" target="_blank" rel="noopener noreferrer">
+        <img src={github} alt="Take a look at my Github" />
+      </a>
+
+      <a href="https://wa.me/7519075696" target="_blank" rel="noopener noreferrer">
+        <img src={whatsapp} alt="Message me on Whatsapp" />
+      </a>
+
+      
+
+      </div>
+
         <div className="form-container name-container">
           <label htmlFor="message-name">Your name</label>
           <input id="message-name" type="text" />
@@ -186,9 +212,7 @@ function App() {
 
       {/* <a href="#" id="btn-gra" class="btn-gra">hover me</a> */}
 
-       <button id="btn-gra" class="btn-gra">hover me</button>
-
-        <button className="send-button" onClick={async () => await sendMessage()}>Send Message</button>
+       <button id="btn-gra" class="btn-gra" onClick={async () => await sendMessage()}>Send Message</button>
   </div>
 
       
