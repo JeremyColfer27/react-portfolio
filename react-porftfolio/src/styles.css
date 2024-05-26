@@ -247,6 +247,11 @@ body {
     top:0;
     cursor: pointer;
   }
+
+
+  .contact-close-button img:hover {
+    transform: scale(1.2); /* Increase the scale on hover */
+  }
   
   .contact-header{
     display: block;
@@ -270,7 +275,7 @@ body {
   }
   
   .socials img:hover {
-    transform: scale(1.1); /* Increase the scale on hover */
+    transform: scale(1.2); /* Increase the scale on hover */
   }
 
  
