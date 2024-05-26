@@ -176,7 +176,7 @@ function App() {
         <img src={linkedin} alt="Open my Linkedin Profile" />
       </a>
 
-      <a href="mailto:liamjones73@outlook.com" target="_blank" rel="noopener noreferrer">
+      <a href="mailto:liam@liamjones.io" target="_blank" rel="noopener noreferrer">
         <img src={email_w} alt="Send me an Email" />
       </a>
 
