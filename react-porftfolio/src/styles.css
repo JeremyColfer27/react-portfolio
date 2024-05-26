@@ -487,9 +487,8 @@ body {
   border-radius: 20px;
   transition: 0.3s;
   color:white; /*Title of*/
-  backdrop-filter: blur(5px);
+  background: none;
 
-  /* filter: blur(0px); */
 }
 
 .project-open{
@@ -518,15 +517,13 @@ body {
 }
 
 .projects-backdrop::before {
+  background: none;
   content: '';
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: inherit; /* Inherit the background color of the parent */
-  -webkit-filter: blur(5px); /* For older Chrome and Safari */
-  filter: blur(5px);
   z-index: -1; /* Place it behind the content */
 }
 
