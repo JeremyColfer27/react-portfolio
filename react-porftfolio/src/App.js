@@ -25,7 +25,7 @@ function App() {
   const [email, setEmail] = useState("jeremycolfer03@gmail.com");
   const [name, setName] = useState("default name");
   
-  const enableMessageSend = false;
+  const enableMessageSend = true;
 
   const API_BASE = "https://cssfantasyapi.onrender.com";
   // const API_BASE = "http://localhost:3001";
