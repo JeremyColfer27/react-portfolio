@@ -144,70 +144,90 @@ body {
     font-size: 0.85em;
   }
 
-  #about-page{
+  #about-page {
     position: fixed;
     width: 90vw;
     height: 90vh;
-    top:50%;
-    left:50%;
+    top: 50%;
+    left: 50%;
     padding: 2em;
-
     transform: translate(-50%, -50%);
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
-    gap:5em;
-
+    justify-content: center; /* Center content vertically */
+    gap: 2em; /* Adjust gap as necessary */
     color: white;
-
     border-radius: 20px;
     background-color: rgba(200, 200, 200, 0.5);
     backdrop-filter: blur(10px);
     border: 1px solid white;
-
   }
-
-  #about-page.hidden{
+  
+  #about-page.hidden {
     display: none;
-
   }
-
-  .about-title{
-    font-size: 3.25em;
+  
+  .about-close-button {
+    position: fixed; /* Position fixed to the viewport */
+    right: 2em; /* Adjust as necessary */
+    top: 2em; /* Adjust as necessary */
+    background: none;
+    border: none;
+    cursor: pointer;
   }
-
-  .about-container{
+  
+  .about-close-button img {
+    transition: transform 0.3s ease; /* Adding transition for smooth effect */
+  }
+  
+  .about-close-button img:hover {
+    transform: scale(1.2); /* Increase the scale on hover */
+  }
+  
+  .about-title {
+    font-size: 2rem;
+    font-family: "Big Shoulders Display", sans-serif;
+    text-align: center; /* Ensure the title is centered */
+  }
+  
+  .about-container {
     max-width: 1000px;
     display: flex;
     flex-direction: column;
-    gap:3em;
+    gap: 2em;
+    align-items: center; /* Center content within the container */
   }
-
-  .about-image-container{
+  
+  .about-image-container {
     background-color: white;
     border-radius: 20px;
     display: flex;
     justify-content: start;
+    width: 100%; /* Ensure the container takes the full width */
   }
-
-  .about-content{
+  
+  .about-content {
     display: grid;
     grid-template-columns: 2fr 3fr;
-    gap:5em;
+    gap: 5em;
+    width: 100%; /* Ensure the grid takes the full width */
   }
-
-  .about-text-content{
+  
+  .about-text-content {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap:2em;
+    gap: 2em;
   }
-
-  .about-buttons-container{
+  
+  .about-buttons-container {
     display: flex;
     gap: 3em;
   }
+  
+  
+  
 
   .contact-form{
     z-index: 3;
@@ -246,6 +266,10 @@ body {
     font-weight: bold;
     top:0;
     cursor: pointer;
+  }
+
+  .contact-close-button img{
+    transition: transform 0.3s ease; /* Adding transition for smooth effect */
   }
 
 
@@ -296,14 +320,15 @@ body {
   .form-container input{
     /* height:2.5em; */
     width: 100%;
-
     text-align: start;
-
     color: white;
-
-
     border: none;
     background: none;
+    font-family: AcuminPro;
+  }
+
+  #message-content{
+    resize: none;
   }
 
   .form-container label{
@@ -322,6 +347,7 @@ body {
     height: 5em;
     background: none;
     border: none;
+    font-family: AcuminPro;
   }
 
   #message-content:focus{
@@ -345,6 +371,9 @@ body {
       border-radius: 20px;
 
       cursor: pointer;
+      transition: transform 0.3s ease; /* Adding transition for smooth effect */
+
+      
   }
 
 
@@ -368,6 +397,8 @@ body {
     z-index: 1;
     cursor: pointer;
     overflow: hidden; /* Ensure the pseudo-elements are contained */
+    transition: transform 0.3s ease; /* Adding transition for smooth effect */
+
 }
 
 #btn-gra:before, #btn-gra:after {

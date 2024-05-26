@@ -131,7 +131,14 @@ function App() {
   <div id="about-page" className="about-page hidden">
     <div className="about-container">
 
-    <h2 className="about-title">About Me</h2>
+        <button className='about-close-button'
+        onClick={() => document.getElementById("about-page").classList.add("hidden")}
+        >
+          <img className="close-button" src={close} alt="close window icon" />
+        </button>
+
+
+    <h2 className="about-title">ABOUT ME</h2>
     <div className="about-content">
       <div className="about-image-container">
         <img className="about-image" alt='a picture of me'></img>
@@ -142,11 +149,11 @@ function App() {
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. In ipsum distinctio, accusantium, labore iste nemo mollitia totam optio sequi molestias eius blanditiis. Dolores ipsa quia molestias ad officia non eius tempore, suscipit fugit? Rerum, temporibus?</p>
         <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Autem voluptas molestias ex perferendis accusamus inventore.</p>
         <div className="about-buttons-container">
-          <button className='button' onClick={() => {
+        <button id="btn-gra" class="btn-gra" onClick={() => {
             document.getElementById("about-page").classList.add("hidden")
             document.getElementById("projects-page").classList.toggle("hidden"); 
                                                            }}>Projects</button>
-          <button className='button' onClick={() => document.getElementById("contact-form").classList.remove("hidden")}>Contact</button>
+          <button id="btn-gra" class="btn-gra" onClick={() => document.getElementById("contact-form").classList.remove("hidden")}>Contact</button>
         </div>
       </div>
     </div>
@@ -200,7 +207,7 @@ function App() {
         </div>
 
         <div className="form-container content-container">
-          <label htmlFor="message-content">Message</label>
+          <label htmlFor="message-content">Your message</label>
           <textarea id="message-content" type="text"/>
         </div>
 
