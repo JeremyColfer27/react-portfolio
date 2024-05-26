@@ -25,7 +25,7 @@ function App() {
   const [email, setEmail] = useState("jeremycolfer03@gmail.com");
   const [name, setName] = useState("default name");
   
-  const enableMessageSend = true;
+  const enableMessageSend = false;
 
   const API_BASE = "https://cssfantasyapi.onrender.com";
   // const API_BASE = "http://localhost:3001";
@@ -36,6 +36,8 @@ function App() {
     const messageName = document.getElementById("message-name").value;
     const messageReturnEmail = document.getElementById("message-return-email").value;
 
+    console.log(document.getElementById("message-return-email").attributes);
+
     if(enableMessageSend){
       const response  = await fetch(API_BASE+"/admin/email", {
         method: "POST",
@@ -43,8 +45,8 @@ function App() {
           'Content-Type': 'application/json'
         },
         body:JSON.stringify({
-          "for": "liamjones73@outlook.com",
-          // "for": "Jeremycolfer03@gmail.com",
+          "for": "liam",
+          // "for": "jeremy",
           "message": messageContent,
           "email": messageReturnEmail,
           "name": messageName
@@ -203,8 +205,8 @@ function App() {
         </div>
 
         <div className="form-container return-email-container">
-          <label htmlFor="message-return-email">Your email</label>
-          <input id="message-return-email" type="text" />
+          <label htmlFor="message-return-email">Your email address</label>
+          <input id="message-return-email" type="email" />
         </div>
 
 
