@@ -30,10 +30,12 @@ html{
   width: 100vw;
   max-width: 100vw;
   overflow-x: none;
+  overflow-y: none;
 }
 
 body {
   width: 100%;
+  max-width: 100%;
     position: relative;
     font-family: AcuminPro;
 }
@@ -629,10 +631,6 @@ body {
   transition: transform 0.3s ease, z-index 0.3s ease; /* Smooth transition for scale and z-index */
 }
 
-.project:hover {
-  transform: scale(1.02); /* Increase the scale on hover */
-  z-index: 10; /* Bring the hovered element to the front */
-}
 
 
 .project-info{
@@ -647,7 +645,7 @@ body {
   
 
   color: white;
-  z-index: 2;
+  z-index: 3;
 }
 
 .tags{
@@ -681,8 +679,8 @@ body {
   height: 100%;
   object-fit: cover;
 
-  border-radius: inherit;
-  z-index: 3;
+  border-radius: 15px;
+  z-index: 1;
 }
 
 
@@ -691,12 +689,32 @@ body {
 .overlay {
   position: absolute;
   bottom: 0;
+  left:0;
   width: 100%;
   height: 100%;
   background: linear-gradient(to top, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0));
-  z-index: 0;
+  z-index: 2;
+  border-radius: inherit;
+  /* opacity: 0.8; */
+}
+
+
+.project-button{
+  width: 100%;
+  height: 100%;
+  position: relative;
   border-radius: inherit;
 }
+
+
+
+.project-button:hover{
+  transition: 0.3s;
+  transform: scale(1.03);
+  z-index: 1;
+}
+
+
 
 .project > *{
   mix-blend-mode: normal;

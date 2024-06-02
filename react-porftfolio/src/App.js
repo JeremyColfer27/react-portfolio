@@ -280,7 +280,8 @@ function App() {
                    id={"project-" + i.toString()}
 
                    >
-                <div className="project-info">
+
+<div className="project-info">
                   <h3 className="project-thumbnail-title">{p.title}</h3>
                   <div className="tags">
                     {p.tags.map( (t) => 
@@ -288,6 +289,10 @@ function App() {
                     )}
                   </div>
                 </div>
+
+                <div className="project-button">
+
+
 
 
                 <div className="overlay"
@@ -304,10 +309,18 @@ function App() {
                   else return p;  
                   }))
               }}
-                ></div>
+                >
+
+
+
+
+                </div>
                 <img className="project-thumbnail-image" 
                      src={p.img} 
                      alt={p.imgAltText} />
+
+                </div>
+
                 <p.TemplatePage 
                 hidden={projectsHidden[i].isHidden}
                 containerClasses={["expanded-project"]}
