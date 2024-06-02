@@ -1,5 +1,5 @@
 import React from 'react';
-import { useState } from 'react';
+import { useState, useRef } from 'react';
 import logo from './logo.svg';
 import close from './assets/close_white.png';
 
@@ -24,8 +24,9 @@ function App() {
   const [message, setMessage] = useState("this is the default message");
   const [email, setEmail] = useState("jeremycolfer03@gmail.com");
   const [name, setName] = useState("default name");
-  
-  const enableMessageSend = true;
+  const emailInputRef = useRef(null);
+
+  const enableMessageSend = false;
 
   const API_BASE = "https://cssfantasyapi.onrender.com";
   // const API_BASE = "http://localhost:3001";
@@ -34,9 +35,23 @@ function App() {
   const sendMessage = async() => {
     const messageContent = document.getElementById("message-content").value;
     const messageName = document.getElementById("message-name").value;
-    const messageReturnEmail = document.getElementById("message-return-email").value;
+    const messageReturnEmail = emailInputRef.current.value;
 
-    console.log(document.getElementById("message-return-email").attributes);
+    console.log(emailInputRef.current.classList);
+
+
+    const isValidEmailAddress = 
+      matchesEmailRegex(messageReturnEmail) && messageReturnEmail.length >= 3;
+
+    console.log(isValidEmailAddress);
+
+    if(!isValidEmailAddress || messageName.length <= 0 || messageContent.length <= 0){
+      window.alert("make sure you fill out each section before sending me a message");
+      emailInputRef.current.classList.add("validityChecked");
+      document.getElementById("message-name").classList.add("validityChecked");
+      document.getElementById("message-content").classList.add("validityChecked")
+    }
+
 
     if(enableMessageSend){
       const response  = await fetch(API_BASE+"/admin/email", {
@@ -83,6 +98,11 @@ function App() {
     // document.documentElement.setAttribute("style", `--viewport-height: ${"300"}px`);
 
   }, [])
+
+  const matchesEmailRegex = (emailStr) => {
+    return  /^[a-zA-Z0-9.!#$%&'*+\/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$/
+    .test(emailStr)
+  }
 
   //runs after receiving confirmation that email has been sent
   const handleSuccessfulMessage = () => {
@@ -203,17 +223,26 @@ function App() {
 
         <div className="form-container name-container">
           <label htmlFor="message-name">Your name</label>
-          <input id="message-name" type="text" />
+          <input id="message-name" type="text" onChange={(e) => {
+            if(e.target.value.length > 0) e.target.classList.add("valid");
+            else(e.target.classList.remove("valid"))
+          }}/>
         </div>
 
         <div className="form-container content-container">
           <label htmlFor="message-content">Your message</label>
-          <textarea id="message-content" type="text"/>
+          <textarea id="message-content" className="message-content" type="text" onChange={(e) => {
+            if(e.target.value.length > 0) e.target.classList.add("valid");
+            else(e.target.classList.remove("valid"))
+          }}/>
         </div>
 
         <div className="form-container return-email-container">
           <label htmlFor="message-return-email">Your email address</label>
-          <input id="message-return-email" type="email" />
+          <input ref={emailInputRef} id="message-return-email" type="email" onChange={(e) => {
+            if(e.target.value.length > 0 && matchesEmailRegex(e.target.value)) e.target.classList.add("valid");
+            else(e.target.classList.remove("valid"))
+          }} />
         </div>
 
 
