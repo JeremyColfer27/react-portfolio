@@ -132,16 +132,21 @@ body {
     max-width: 100vw;
   }
 
-  .buttons button, .about-buttons-container button{
+  .buttons button{
     background: none;
     color: #adadad;
     border-radius:100px;
-    border: 2px solid #adadad;
+    border: 1px solid #adadad;
     width: 10em;
     padding: 1rem;
-    mix-blend-mode: color-dodge;
     cursor: pointer;
     font-size: 0.85em;
+    transition: transform 0.3s ease; /* Adding transition for smooth effect */
+
+  }
+
+  .buttons button:hover{
+    transform: scale(1.05); /* Increase the scale on hover */
   }
 
   #about-page {
@@ -160,7 +165,7 @@ body {
     color: white;
     border-radius: 20px;
     background-color: rgba(200, 200, 200, 0.5);
-    backdrop-filter: blur(10px);
+    backdrop-filter: blur(20px);
     border: 1px solid white;
   }
   
@@ -222,8 +227,10 @@ body {
   }
   
   .about-buttons-container {
+    align-self: self-start;
     display: flex;
     gap: 3em;
+    width: 400px;
   }
   
   
@@ -491,7 +498,6 @@ body {
   }
 
 .projects-page{
-  overflow: hidden;
   width: 90vw;
   height: 90vh;
   top:50%;
@@ -506,9 +512,8 @@ body {
   border-radius: 20px;
   transition: 0.3s;
   color:white; /*Title of*/
-  backdrop-filter: blur(5px);
+  background: none;
 
-  /* filter: blur(0px); */
 }
 
 .project-open{
@@ -530,21 +535,20 @@ body {
   width: 100%;
   height: 100%;
   background-color: rgba(200, 200, 200, 0.5);
-  backdrop-filter: blur(10px);
+  backdrop-filter: blur(20px);
   border: 1px white solid;
   overflow: auto;
+  border-radius: 20px;
 }
 
 .projects-backdrop::before {
+  background: none;
   content: '';
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: inherit; /* Inherit the background color of the parent */
-  -webkit-filter: blur(5px); /* For older Chrome and Safari */
-  filter: blur(5px);
   z-index: -1; /* Place it behind the content */
 }
 
@@ -567,7 +571,7 @@ body {
   grid-template-rows: repeat(auto-fit, minmax(var(--min-row-height), 1fr));
   position: relative;
   gap: 1em;
-  padding: 0 1em 0 0;
+  padding: 1em 1em 1em 1em;
   overflow-y: scroll;
 }
 
@@ -582,14 +586,11 @@ body {
 }
 
 .projects-close-button{
-  color: rgb(92, 92, 92);
   position: absolute;
   right: 0em;
   background: none;
   border: none;
-  text-align: left;
-  font-size: 1.45em;
-  font-weight: bold;
+
   top:0;
   cursor: pointer;
 }
@@ -607,22 +608,32 @@ body {
   /* border: 2px solid red; */
 }
 
-.projects-close-button:hover{
-  color: black;
+.projects-close-button img {
+  transition: transform 0.3s ease; /* Adding transition for smooth effect */
 }
-  
 
 
-.project{
+.projects-close-button img:hover {
+  transform: scale(1.2); /* Increase the scale on hover */
+}
+
+
+
+.project {
   width: 100%;
-  /* min-height: 200px; */
   min-height: var(--min-row-height);
   position: relative;
-
   color: black;
   mix-blend-mode: normal;
   border-radius: 15px;
+  transition: transform 0.3s ease, z-index 0.3s ease; /* Smooth transition for scale and z-index */
 }
+
+.project:hover {
+  transform: scale(1.02); /* Increase the scale on hover */
+  z-index: 10; /* Bring the hovered element to the front */
+}
+
 
 .project-info{
   position: absolute;
@@ -633,6 +644,7 @@ body {
   flex-direction: column;
   align-items: center;
   gap: 0.5em;
+  
 
   color: white;
   z-index: 2;
@@ -648,13 +660,15 @@ body {
   font-size: 0.9rem;
   width: fit-content;
   height: fit-content;
-  background: white;
-  color: black;
+  background:#00000008;
+  backdrop-filter: blur(5px);
+  border: 1px white solid;
+  color: rgb(255, 255, 255);
   padding:0.3em 0.7em 0.1em 0.7em;
   border-radius: 50px;
   margin: 0;
 
-  box-shadow: 0px 1px 3px 1px rgb(55, 55, 55);
+  
 }
 
 .project-thumbnail-title{
@@ -671,17 +685,17 @@ body {
   z-index: 3;
 }
 
-.overlay{
+
+
+
+.overlay {
   position: absolute;
+  bottom: 0;
   width: 100%;
   height: 100%;
-
-  background-color: black;
-  opacity: 0.01;
-  border-radius: inherit;
-
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0));
   z-index: 0;
-
+  border-radius: inherit;
 }
 
 .project > *{
