@@ -25,23 +25,23 @@
     font-style: normal;
 }
 
-@media screen and (min-width:1000px) {
+@media screen and (min-width: 1000px) {
     ::-webkit-scrollbar {
         padding-left: 10px;
         width: 8px;
     }
-    
+
     ::-webkit-scrollbar-track {
         padding-left: 10px;
-        border-radius: 100vw;  
+        border-radius: 100vw;
     }
-    
+
     .expanded-project ::-webkit-scrollbar-thumb {
         padding-left: 10px;
         border-radius: 100vw;
         background: rgba(0, 0, 0, 0.366);
     }
-    
+
     ::-webkit-scrollbar-thumb:hover {
         padding-left: 10px;
         background: hsl(0, 0%, 100%);
@@ -54,8 +54,7 @@
     width: 90vw;
     height: 90vh;
     backdrop-filter: blur(5px);
-    background: rgba(191,191,191, 0.6);
-
+    background: rgba(191, 191, 191, 0.6);
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -65,7 +64,6 @@
     gap: 0.5em;
     padding: 2em 1em 1em 1em;
     border: 1px solid rgb(255, 255, 255);
-    
     cursor: auto;
     border-radius: 20px;
     transition: 0.3s;
@@ -75,7 +73,7 @@
     transform-origin: 50vw 50vh;
 }
 
-.expanded-project::before{
+.expanded-project::before {
     content: '';
     position: absolute;
     z-index: -1;
@@ -86,20 +84,18 @@
     /* -webkit-backdrop-filter: blur(20px); */
 }
 
-
 @keyframes slidein {
     0% {
         scale: 0.01;
     }
     100% {
         scale: 1;
-    }  
+    }
 }
 
 .hidden-project {
     display: none;
 }
-
 
 .top {
     display: flex;
@@ -111,7 +107,8 @@
     position: relative;
 }
 
-.back_button, .close_button {
+.back_button,
+.close_button {
     background: none;
     border: none;
     cursor: pointer;
@@ -122,7 +119,8 @@
     height: 100%;
 }
 
-.back_button img, .close_button img {
+.back_button img,
+.close_button img {
     height: 1.8em;
     width: auto;
 }
@@ -362,4 +360,108 @@
 
 .extraInfo a:hover {
     text-decoration: underline;
+}
+
+/* Responsive Styles */
+@media screen and (max-width: 600px) {
+    .expanded-project {
+        width: 95vw;
+        height: 95vh;
+        padding: 1em;
+    }
+
+    .top {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        flex-wrap: wrap;
+        gap: 0.5em;
+    }
+
+    .back_button,
+    .close_button {
+        margin: 0;
+    }
+
+    .back_button img,
+    .close_button img {
+        height: 1.5em;
+        width: auto;
+    }
+
+    .tags {
+        flex-grow: 1;
+        flex-wrap: wrap;
+        margin: 0;
+    }
+
+    .tag {
+        font-size: 0.7rem;
+        padding: 3px 7px;
+    }
+
+    .expanded-project-body {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 10px;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+    }
+
+    .intro {
+        grid-column: span 4;
+        padding: 20px;
+        font-size: 1.2rem;
+    }
+
+    .second_image {
+        grid-column: span 4;
+    }
+
+    .description {
+        grid-column: span 4;
+        padding: 20px;
+        font-size: 0.9rem;
+    }
+
+    .reviews {
+        grid-column: span 4;
+        padding: 10px;
+    }
+
+    .accomplishments {
+        grid-column: span 4;
+        flex-direction: row;
+        gap: 5px;
+        align-items: center;
+        padding: 10px;
+        align-items: stretch; /* Ensure items stretch to the same height */
+    }
+
+    .accomplishment {
+        width: 80%;
+        margin: 5px;
+    }
+
+    .schematics {
+        grid-column: span 4;
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+    .schematics img {
+        width: 40%;
+    }
+
+    .extraInfo {
+        grid-column: span 4;
+        margin: 10px 0;
+    }
+
+    .header_logo,
+    .header_image {
+        grid-column: span 2;
+    }
 }
