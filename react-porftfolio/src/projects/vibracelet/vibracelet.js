@@ -46,9 +46,9 @@ function TemplatePage(props) {
                 </button>
             </div>
 
-            <div className={styles["expanded-project-body"]}>
+        <div className={styles["expanded-project-body"]}>
                 
-            <div class="slider">
+        <div class="slider">
             <section>
                 <h1>Section One</h1>
             </section>

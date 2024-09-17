@@ -61,6 +61,11 @@ function TemplatePage(props){
 
             <div className={styles["expanded-project-body"]}>
 
+            {/* <div className={styles["tags"]}>
+                    {tags.map((tag, index) => (
+                        <span key={index} className={styles["tag"]}>{tag}</span>
+                    ))}
+            </div> */}
 
                 <div className={styles["header_logo"]}>
                     <img src={fluentree_logo_blue}></img>

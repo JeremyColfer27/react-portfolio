@@ -665,12 +665,14 @@ body {
   padding:0.3em 0.7em 0.1em 0.7em;
   border-radius: 50px;
   margin: 0;
+  text-wrap: nowrap;
 
   
 }
 
 .project-thumbnail-title{
   font-size: 1.4rem;
+  text-align: center;
 }
 
 .project-thumbnail-image{
@@ -720,7 +722,7 @@ body {
   mix-blend-mode: normal;
 }
 
-.projects-container :nth-child(1){
+.projects-container > :nth-child(1){
     grid-column: span 2;
     grid-row: span 1;
 }
@@ -733,7 +735,7 @@ body {
   display: none;
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 800px) {
   html{
     font-size: 14px
   }
@@ -749,5 +751,23 @@ body {
     grid-row: unset;
     grid-column: unset;
 
+  }
+
+  .project{
+    max-width: 100vw;
+    /* width: 99vw; */
+  }
+
+  .projects-container{
+    max-width: 100%;
+  }
+
+  .project-button{
+    width: 100%;
+    max-width: 100%;
+    /* width: 100%; */
+    /* height: 100%; */
+    position: relative;
+    border-radius: inherit;
   }
 }

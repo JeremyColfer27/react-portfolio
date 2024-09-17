@@ -10,6 +10,7 @@ import {useEffect} from 'react'
 import generic from './projects/TemplatePage'
 import pot from './projects/pot/pubsOnTap'
 import fluentree from './projects/fluentree/Fluentree'
+import fantasy from './projects/fantasy/Fantasy'
 import vibracelet from './projects/vibracelet/vibracelet'
 import linkedin from './assets/linkedin_w.png';
 import email_w from './assets/email_w.png';
@@ -19,7 +20,7 @@ import whatsapp from './assets/whatsapp_w.png';
 
 
 function App() {
-  const [projects, setProjects] = useState([pot, fluentree, vibracelet])
+  const [projects, setProjects] = useState([pot, fluentree, vibracelet, fantasy])
   const [projectsHidden, setProjectsHidden] = useState(projects.map(p => {return {project: p, isHidden: true}}))
   const [isProjectOpen, setIsProjectOpen] = useState(false);
   const [message, setMessage] = useState("this is the default message");
