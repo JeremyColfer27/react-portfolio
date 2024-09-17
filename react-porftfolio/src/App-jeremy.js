@@ -20,7 +20,7 @@ import whatsapp from './assets/whatsapp_w.png';
 
 
 function App() {
-  const [projects, setProjects] = useState([pot, fluentree, vibracelet])
+  const [projects, setProjects] = useState([fluentree, vibracelet, fantasy])
   const [projectsHidden, setProjectsHidden] = useState(projects.map(p => {return {project: p, isHidden: true}}))
   const [isProjectOpen, setIsProjectOpen] = useState(false);
   const [message, setMessage] = useState("this is the default message");
@@ -62,8 +62,8 @@ function App() {
           'Content-Type': 'application/json'
         },
         body:JSON.stringify({
-          "for": "liam",
-          // "for": "jeremy",
+          // "for": "liam",
+          "for": "jeremy",
           "message": messageContent,
           "email": messageReturnEmail,
           "name": messageName
