@@ -5,6 +5,7 @@ import close from './assets/close_white.png';
 
 import './App.css';
 import './styles.css'
+import './styles-jeremy.css'
 import { Gradient } from 'whatamesh'
 import {useEffect} from 'react'
 import generic from './projects/TemplatePage'
@@ -131,8 +132,8 @@ function App() {
 
     <div className="name">
       <h1>
-        <span className="liam">LIAM</span>
-        <span className="jones"> JONES</span>
+        <span className="liam first-name">JEREMY</span>
+        <span className="jones last-name">COLFER</span>
       </h1>
     </div>
 

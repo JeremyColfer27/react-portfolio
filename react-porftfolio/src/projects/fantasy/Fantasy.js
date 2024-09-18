@@ -9,6 +9,9 @@ import back_white from '../../assets/back_white.png';
 import close from '../../assets/close_white.png';
 import fluentree_logo_blue from './assets/fluentreeLogoBlue.png';
 import header_img from './assets/mockup-fantasy-left.png';
+import header_img_desktop from './assets/mockup-fantasy-dekstop-front.png';
+import leaderboard from './assets/leaderboard.png'
+import login from './assets/login.png'
 import lesson_img from './assets/video_comprehension_final.png';
 import logoSVG from './assets/logo.svg';
 const title = "Fantasy Football Web App"
@@ -63,43 +66,113 @@ function TemplatePage(props){
 
 
                 <div className={styles["header_logo"]}>
-                    <img src={fluentree_logo_blue}></img>
-                    <p>Intramural Football Fantasy</p>
+                    {/* <img src={fluentree_logo_blue}></img> */}
+                    <p>Intramural Fantasy Football</p>
+                    <div className={styles["header_image"]}>
+                        <img src={header_img}></img>
+                    </div>
+
+                    <div className={styles["header_image_desktop"]}>
+                        <img className={styles["desktop-mockup"]} src={header_img_desktop}></img>
+                        <img className={styles["phone-mockup"]} src={header_img}></img>
+                    </div>
                 </div>
-                <div className={styles["header_image"]}>
-                    <img src={header_img}></img>
-                </div>
+
             
 
             <div className={styles["slogan"]}>
-                <p>Harvesting language skills for life long learning</p>
+                <p>The match prediction app that brings extra motivation and laughs to your football team</p>
             </div>
 
 
-            <div className={styles["intro"]}>
+            <div className={styles["block-fluen"]  + " " + styles["why-create"]}>
+                    <h3>Why did I create it?</h3>
+                    <p>
+                        I play for the Computer Science football team at Bristol Uni every Wednesday.
+
+                        <br></br>
+
+                        <br></br>
+
+                        We love playing but it's no shock that many of us aren't very good at scoring goals, winning games, and for some players, turning up for them to begin with
+
+                        <br></br>
+                        <br></br>
+                        I built this web app to address all of these issues by motivating our players to show up, play well, and make light of the situation win or lose.
+                    </p>
+            </div>
+
+
+            <div className={styles["image-block"]}>
+                    <img src={login} alt="" />
+            </div>
+
+            <div className={styles["image-block"]  +" " + styles["leaderboard-image"]}>
+                    <img src={leaderboard} alt="" />
+            </div>
+
+            <div className={styles["block-fluen"]  + " " + styles["how-it-works"]}>
+                    <h3>How does it work?</h3>
+                    <p>
+                        Every week users login to select their own mini teams of 5 computer science players, earning points based on their real-life performances. 
+
+                        <br></br>
+                        <br></br>
+                        After each game our admin uploads player performances to the site which automatically updates the weekly and season leaderboards to reflect the best user predictions.
+
+                        <br></br>
+                        <br></br>
+                        Points are awarded to specific players for goals, assists, and strong performances.
+                        Deductions are also applied for players who turn up late, miss open goals, or find other ways to embarass the team...
+                    </p>
+            </div>
+
+
+
+
+            <div className={styles["block-fluen"]  + " " + styles["how-built"]}>
+                <div className="">
+
+                    <h3>How did I build it?</h3>
+                    <p>This was my first ever full-stack project so I learned a lot about how webpages interact with servers and databases to produce and end-to-end online experiences. I was already familliar with using vanilla javascript for static websites so I decided to develop the entire stack with Javascript tools: React, Node, and Mongo (JSON) database which provided some basic familiarity whilst I explored unfamilliar and intimidating web concepts.
+                    </p>
+                   
+                </div>
+                    <div className={styles["sub-block"]}>
+                        <h4>Backend</h4>
+                        <p>I used Node JS to build an API that bridged the gap between users clicking buttons on their browser and the modification of data behind the scenes needed to provide the weekly game experience.</p>    
+                    </div>
+
+                    <div className={styles["sub-block"]}>
+                        <h4>Frontend</h4>
+                        <p>I learned how to use React for this project which was useful for creating templates for different UI elements that could be rendered dynamically based on the match and player data fetched from the server.</p>
+                    </div>
+
+                    <div className={styles["sub-block"]}>
+                        <h4>Security</h4>
+                        <p>I learned new concepts for ensuring that user's accounts are well protected (authentication) and that data is only ever modified by users with the right permissions (authorisation).
+                            <br></br><br></br>
+                            I quickly learned that you have to handle all security logic on the backend because it's very easy to spoof information from the browser over the internet. 
+                            <br></br><br></br>
+                            Similarly, you can use design to help nudge users away from making errors when logging in and sending data but you cannot guarantee it's going to be sensible to process without sanity checks on the backend.</p>   
+                    </div>
+
+</div>
+
+            {/* <div className={styles["intro"]}>
                     <p>Fluentree is a language-learning platform designed to address the shortcomings of existing language learning apps. It aims to improve learner engagement and fluency rates by offering personalised learning paths, diverse resources, and round-the-clock AI and expert-powered support. Additionally, Fluentree caters to educators by providing a teacher portal with curriculum-aligned resources and tools for tracking student progress.</p>
             </div>
             
-                <div className={styles["block-fluen"]}>
-                    <h3>Context</h3>
-                    <p>Fluentree emerged from the collaboration of two university modules: Ideation for Innovation and New Creative Ventures. In the Ideation for Innovation module, we explored creative ways to tackle complex challenges using playful ideation strategies. Building on these ideas, the New Creative Ventures module focused on transforming them into viable business ventures. Working in interdisciplinary groups, we developed robust business models and pitched our ideas effectively.</p>
-                </div>
-                <div className={styles["block-fluen"]}>
-                    <h3>Problem Statement</h3>
-                    <p>Despite the proliferation of language learning apps, 95% of learners fail to achieve fluency. This high attrition rate is often attributed to the lack of engagement and personalisation in existing apps. Additionally, teachers find it challenging to integrate these apps into their curriculum due to misalignment with educational standards. Fluentree addresses these issues by offering a personalised and engaging platform designed for both individual learners and educational institutions.</p>
-                </div>
+
                 <div className={styles["lesson-pic"]}>
                     <img className="lesson_img" src={lesson_img} alt="Screenshot of a lesson" />
                 </div>
-                <div className={styles["block-fluen"]}>
-                    <h3>Skills</h3>
-                    <p>My unique contribution to Fluentree was bridging the gap between user needs and technical implementation. Through thorough user research, I identified pain points and preferences that informed the design of personalised learning paths and engaging content. My expertise in UX/UI design ensured an intuitive and user-friendly interface, while my project management skills facilitated seamless collaboration among language experts, developers, and stakeholders.</p>
-                </div>
+
             
-            
+             */}
 
             <div className={styles["extraInfo"]}>
-                <a>Download the full venture plan here LINK FULL REPORT</a>
+                <p>Check out my web app at</p><a target="_blank" href="https://www.intramuralfantasy.com">intramuralfantasy.com</a>
                 
             </div>
 
