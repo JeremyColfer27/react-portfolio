@@ -29,7 +29,7 @@ function App() {
   const [name, setName] = useState("default name");
   const emailInputRef = useRef(null);
 
-  const enableMessageSend = false;
+  const enableMessageSend = true;
 
   const API_BASE = "https://cssfantasyapi.onrender.com";
   // const API_BASE = "http://localhost:3001";
