@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/react-portfolio/static/css/main.3f61a0f2.css",
-    "main.js": "/react-portfolio/static/js/main.72471055.js",
+    "main.js": "/react-portfolio/static/js/main.2d018709.js",
     "static/js/787.b12f110f.chunk.js": "/react-portfolio/static/js/787.b12f110f.chunk.js",
     "static/media/fluentree_hero.jpg": "/react-portfolio/static/media/fluentree_hero.294717f0810f5c2db13e.jpg",
     "static/media/mockup-fantasy-dekstop-front.png": "/react-portfolio/static/media/mockup-fantasy-dekstop-front.4568a2cd8083e10855a9.png",
@@ -74,11 +74,11 @@
     "index.html": "/react-portfolio/index.html",
     "static/media/newProfileIcon.svg": "/react-portfolio/static/media/newProfileIcon.257728147c365225d17252f170b5caca.svg",
     "main.3f61a0f2.css.map": "/react-portfolio/static/css/main.3f61a0f2.css.map",
-    "main.72471055.js.map": "/react-portfolio/static/js/main.72471055.js.map",
+    "main.2d018709.js.map": "/react-portfolio/static/js/main.2d018709.js.map",
     "787.b12f110f.chunk.js.map": "/react-portfolio/static/js/787.b12f110f.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.3f61a0f2.css",
-    "static/js/main.72471055.js"
+    "static/js/main.2d018709.js"
   ]
 }
