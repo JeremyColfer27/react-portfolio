@@ -216,6 +216,10 @@ body {
     flex-direction: column;
     gap: 2em;
     align-items: center; /* Center content within the container */
+justify-content: center;
+    /* min-height: 500px; */
+
+    border: 2px solid yellow;
   }
   
   .about-image-container {
@@ -224,27 +228,90 @@ body {
     display: flex;
     justify-content: start;
     width: 100%; /* Ensure the container takes the full width */
+
+    aspect-ratio: 1/1;
+    min-width: 400px;
   }
   
   .about-content {
     display: grid;
     grid-template-columns: 2fr 3fr;
     gap: 5em;
-    width: 100%; /* Ensure the grid takes the full width */
+    width: 100%; /* Ensure the grid takes the full width*/
+
+    min-height: 40vh;
+
+    align-items: center;
   }
   
   .about-text-content {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    /* align-items: center; */
     gap: 2em;
+    
+    border: 2px solid lightblue;
+  }
+
+  .about-text {
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+    gap: 2em;
+    min-height: 10em;
+
+    width: 100%;
+
+    border: 2px solid rebeccapurple;
   }
   
   .about-buttons-container {
     align-self: self-start;
     display: flex;
     gap: 3em;
-    width: 400px;
+    width: 100%;
+  }
+
+  .about-me-mode-container{
+    /* width: 100%; */
+
+    /* border: 2px solid green; */
+  }
+
+  .mode-list{
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    padding: 0 2em;
+
+    justify-content: space-between;
+
+    /* border: 2px solid red; */
+    gap: 2em
+  }
+
+  .mode-list button{
+    padding: 0.5em;
+    cursor: pointer;
+
+    border: none;
+    outline: none;
+    width: 8em;
+
+    border-radius: 10px;
+
+    opacity: 0.7;
+  }
+
+  .mode.active button{
+    padding: 0.5em;
+
+    background-color: black;
+    color: white;
+
+    transition: 0.15s ease-in;
+
+    opacity: 1;
   }
   
   

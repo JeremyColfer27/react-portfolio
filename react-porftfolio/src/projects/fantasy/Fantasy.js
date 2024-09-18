@@ -74,14 +74,14 @@ function TemplatePage(props){
 
                     <div className={styles["header_image_desktop"]}>
                         <img className={styles["desktop-mockup"]} src={header_img_desktop}></img>
-                        <img className={styles["phone-mockup"]} src={header_img}></img>
+                        {/* <img className={styles["phone-mockup"]} src={header_img}></img> */}
                     </div>
                 </div>
 
             
 
             <div className={styles["slogan"]}>
-                <p>The match prediction app that brings extra motivation and laughs to your football team</p>
+                <p>The match prediction app that brings extra motivation and laughs to your football team.</p>
             </div>
 
 
@@ -94,7 +94,7 @@ function TemplatePage(props){
 
                         <br></br>
 
-                        We love playing but it's no shock that many of us aren't very good at scoring goals, winning games, and for some players, turning up for them to begin with
+                        We love playing but it's no shock that many of us aren't very good at scoring goals, winning games, and for some players, turning up for them to begin with.
 
                         <br></br>
                         <br></br>
@@ -134,7 +134,7 @@ function TemplatePage(props){
                 <div className="">
 
                     <h3>How did I build it?</h3>
-                    <p>This was my first ever full-stack project so I learned a lot about how webpages interact with servers and databases to produce and end-to-end online experiences. I was already familliar with using vanilla javascript for static websites so I decided to develop the entire stack with Javascript tools: React, Node, and Mongo (JSON) database which provided some basic familiarity whilst I explored unfamilliar and intimidating web concepts.
+                    <p>This was my first ever full-stack project so I learned a lot about how webpages interact with servers and databases to produce end-to-end online experiences. I was already familliar with using vanilla javascript for static websites so I decided to develop the entire stack with Javascript tools: React, Node, and Mongo (JSON) database which provided some basic familiarity whilst I explored unfamilliar and intimidating web concepts.
                     </p>
                    
                 </div>
@@ -156,7 +156,14 @@ function TemplatePage(props){
                             <br></br><br></br>
                             Similarly, you can use design to help nudge users away from making errors when logging in and sending data but you cannot guarantee it's going to be sensible to process without sanity checks on the backend.</p>   
                     </div>
+</div>
 
+<div className={styles["final-image-mobile"]}>
+                        <img className={styles["desktop-mockup-bottom"]} src={header_img_desktop}></img>
+</div>
+
+<div className={styles["final-image-desktop"]}>
+                        <img className={styles["mobile-mockup-bottom"]} src={header_img}></img>
 </div>
 
             {/* <div className={styles["intro"]}>

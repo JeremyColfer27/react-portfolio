@@ -8,8 +8,8 @@ import './styles.css'
 import './styles-jeremy.css'
 import { Gradient } from 'whatamesh'
 import {useEffect} from 'react'
-import generic from './projects/TemplatePage'
-import pot from './projects/pot/pubsOnTap'
+// import generic from './projects/TemplatePage'
+// import pot from './projects/pot/pubsOnTap'
 import fluentree from './projects/fluentree/Fluentree'
 import fantasy from './projects/fantasy/Fantasy'
 import vibracelet from './projects/vibracelet/vibracelet'
@@ -28,6 +28,7 @@ function App() {
   const [email, setEmail] = useState("jeremycolfer03@gmail.com");
   const [name, setName] = useState("default name");
   const emailInputRef = useRef(null);
+  const [activeLanguage, setActiveLanguage] = useState("english");
 
   const enableMessageSend = true;
 
@@ -107,6 +108,12 @@ function App() {
     .test(emailStr)
   }
 
+  const textModes = ["english", "linkedin", "french"];
+
+  const switchTextMode = function(newMode){
+
+  }
+
   //runs after receiving confirmation that email has been sent
   const handleSuccessfulMessage = () => {
     window.alert("Your message has been received, thank you!")
@@ -138,7 +145,7 @@ function App() {
     </div>
 
     <div className="bio">
-      <p>I am currently in my third year pursuing a Computer Science with Innovation degree (MEng), where I've gained valuable experience integrating core computer science skills in diverse, multi-disciplinary Agile projects.</p>
+      <p>Hi, I'm Jeremy. <br></br>I'm studying Computer Science and Innovation (MEng) at Bristol and I love working on projects that marry technology and creativity. Please check out examples of my work below and let me know what you think!</p>
     </div>
 
     <div className="buttons">
@@ -161,16 +168,76 @@ function App() {
         </button>
 
 
-    <h2 className="about-title">ABOUT ME</h2>
     <div className="about-content">
       <div className="about-image-container">
         <img className="about-image" alt='a picture of me'></img>
       </div>
 
       <div className="about-text-content">
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur, adipisci enim. Cumque aut odit quasi. Repellendus dolore ex soluta quam, sit temporibus placeat mollitia. Eligendi veritatis culpa, laudantium dolorum hic amet iusto voluptas repellendus sequi eos, veniam, nostrum cumque repudiandae.</p>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. In ipsum distinctio, accusantium, labore iste nemo mollitia totam optio sequi molestias eius blanditiis. Dolores ipsa quia molestias ad officia non eius tempore, suscipit fugit? Rerum, temporibus?</p>
-        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Autem voluptas molestias ex perferendis accusamus inventore.</p>
+    <h2 className="about-title">ABOUT ME</h2>
+
+        <div className="about-me-mode-container">
+          <ul className="mode-list">
+            <li className={"mode " + (activeLanguage === "english" ? "active" : "")}><button onClick={() => setActiveLanguage("english")}>Plain English</button></li>
+            <li className={"mode " + (activeLanguage === "linkedin" ? "active" : "")}><button onClick={() => setActiveLanguage("linkedin")}>Linkedin-ese</button></li>
+            <li className={"mode " + (activeLanguage === "french" ? "active" : "")}><button onClick={() => setActiveLanguage("french")}>French</button></li>
+            {/* <li className="mode"></li> */}
+          </ul>
+        </div>
+
+
+        <div className="about-text">
+
+          {activeLanguage === "english" && (
+          <div className="plain-english-text">
+            <p>I'm Jeremy, or Jeremiah :)</p>
+            <p>I'm a keen enjoyer of random coding or creative projects. I also love playing football or pretty much any ball sport that isn't rugby. </p>
+            <br></br>
+            <p>I've worked for a couple smaller companies creating social media videos and designing + building websites</p>
+
+            <p>I currently work part-time for Bristol Uni, delivering seminars and lab support to students in the years below.</p>
+            <br></br>
+            <p>The Computer Science segment of degree has introduced me to the fundamentals of Machine Learning, Human-Computer Interaction and Cyber Security.</p>
+            <br></br>
+            <p>The Innovation segment of my degree has helped me develop my entreprenuerial side, with modules on new venture creation, business analytics and marketing. Through this I've engaged in loads of cross-disciplinary teamwork, business idea prototyping and presentations</p>
+
+
+
+          </div>
+          )}
+
+          {activeLanguage === "linkedin" && (
+          <div className="linkedin-ese-text">
+            {/* <p>The day I was born was actually the exact same day I exited the womb of my mother, and here's what it taught me about early start-up strategy.</p> */}
+            {/* <p>Starting up is much like being born. You are nothing. You are massively reliant on the mother's milk that is seed funding and plenty of sleep deprived nights.</p> */}
+            {/* <br></br> */}
+            <p>My name has been Jeremy since birth but I implore you to call me Jeremiah, if you prefer.</p>
+            <br></br>
+            <p>I have a wealth of interests. I often partake in programming escapades where I may whip up some software in spontaneous fashion. I snatch at any opportunity to synthesis such technical activity creative ideas and media.</p>
+            <br></br>
+            <p>I have offered my esteemed services to numerous modestly-sized enterprises, including but not limited to, my capabilities in website experience design and development, and my craftmanship in the motion picture arts.</p>
+            <br></br>
+            <p>Community is a cornerstone for me, which is why I volunteer my finite time to get paid by the University of Bristol to help them educate my junior Computer Science peers through the delivery of bespoke seminars and lab support.</p>
+            <br></br>
+            <p>Through consistent engagement with the Computer Science wing of my Joint-honours degree, I have come to appreciate the domains of Machine Learning, Human-Computer Interaction, and Cyber Security.</p>
+            <br></br>
+            <p><cite>"A one-winged avian may never fly."</cite> <br></br>Jeremy Colfer</p>
+            <br></br>
+            <br></br>
+            <p>Crucially the other wing of my degree serves my entrepreneurial spirit by granting me the opportunity to expand my theoretical understanding of business modelling, start-up creation, and the dark arts of modern marketing. Wasted would be such a rich understanding without the frequent opportunity to distill the very essense of it into hands-on practice. In this way, I have engaged in numerous team projects which unite the sensibilities of multiple academic disciplines. Further to this I have prototyped and presented countless business ideas to peers, academics and external clientel who undoubtedly benefit from my deep insights.</p>
+          </div>
+          )}
+
+          {activeLanguage === "french" && (
+          <div className="French-text">
+            <p>Bah, c'est Francais</p>
+          </div>
+          )}
+                    
+        </div>
+
+
+
         <div className="about-buttons-container">
         <button id="btn-gra" class="btn-gra" onClick={() => {
             document.getElementById("about-page").classList.add("hidden")
@@ -194,7 +261,7 @@ function App() {
   <div id="contact-form"className="contact-form hidden">
 
       <div className="top">
-        <h2 className='contact-header'>CONTACT</h2>
+        <h2 className='contact-header'>CONTACT ME</h2>
         <button className='contact-close-button'
         onClick={() => document.getElementById("contact-form").classList.add("hidden")}
         >
@@ -204,21 +271,21 @@ function App() {
 
       <div className="socials">
 
-      <a href="https://www.linkedin.com/in/liam--jones" target="_blank" rel="noopener noreferrer">
+      <a href="www.linkedin.com/in/jeremycolfer27" target="_blank" rel="noopener noreferrer">
         <img src={linkedin} alt="Open my Linkedin Profile" />
       </a>
 
-      <a href="mailto:liam@liamjones.io" target="_blank" rel="noopener noreferrer">
+      <a href="mailto:jeremy.colfer@bristol.ac.uk" target="_blank" rel="noopener noreferrer">
         <img src={email_w} alt="Send me an Email" />
       </a>
 
-      <a href="https://github.com/liam-jones-2002" target="_blank" rel="noopener noreferrer">
+      <a href="https://github.com/jeremycolfer27" target="_blank" rel="noopener noreferrer">
         <img src={github} alt="Take a look at my Github" />
       </a>
 
-      <a href="https://wa.me/7519075696" target="_blank" rel="noopener noreferrer">
+      {/* <a href="https://wa.me/7519075696" target="_blank" rel="noopener noreferrer">
         <img src={whatsapp} alt="Message me on Whatsapp" />
-      </a>
+      </a> */}
 
       
 
