@@ -43,15 +43,22 @@ body {
  #gradient-canvas {
     width:100vw;
     height: var(--viewport-height);
-    /* --gradient-color-1: #2a80b9; 
-    --gradient-color-2: #2b3e50; 
-    --gradient-color-3: #e74c3b;  
-    --gradient-color-4: #f1c411; */
+
 
     --gradient-color-1: #043D5D; 
     --gradient-color-2: #032E46; 
     --gradient-color-3: #23B684;  
     --gradient-color-4: #0F595E;
+
+    /* --gradient-color-1: #2a80b9; 
+    --gradient-color-2: #2b3e50; 
+    --gradient-color-3: #e74c3b;  
+    --gradient-color-4: #f1c411; */
+
+        --gradient-color-1: #000000; 
+    --gradient-color-2: #f1abfc; 
+    --gradient-color-3: #6c0067;  
+    --gradient-color-4: #8a0d0d;
     position: absolute;
     z-index: 0;
   }

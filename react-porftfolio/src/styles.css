@@ -739,6 +739,12 @@ body {
   html{
     font-size: 14px
   }
+
+  .projects-page{
+    height: 95vh;
+    width: 97vw;
+    /* border: 2px solid red; */
+  }
   .projects-container{
     grid-template-columns: 1fr;
     justify-content: center;
@@ -760,6 +766,7 @@ body {
 
   .projects-container{
     max-width: 100%;
+
   }
 
   .project-button{
