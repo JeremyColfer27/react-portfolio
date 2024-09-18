@@ -1,0 +1,94 @@
+DISPOSED Bits
+
+
+======== HTML =========
+
+
+<div className={modualiseClassNames(["project-headline"])}>
+                    <h1 className={modualiseClassNames(["project.title"])}>Pubs on Tap</h1>
+                    {/* <img src="./logo192.png" alt="project image" />   */}
+                    <img src={header_img} height="9px" width="16px" alt="" />
+                </div>
+
+                <p className={modualiseClassNames(["project-description"])}>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur odit repellat voluptatibus. Corporis accusantium perferendis id, laudantium illo cupiditate cum esse aperiam, dolore non molestias accusamus veritatis. Voluptate soluta alias cumque veniam quo natus, in eum deserunt eius enim minus quibusdam recusandae neque, adipisci harum impedit illum distinctio commodi dolore! Commodi iste ex dolorum porro libero, nesciunt quo cumque ut!</p>
+
+                <div className={modualiseClassNames(["project-main-content"])}>
+                <div className={modualiseClassNames(["project-section"])}>
+                    <h2>Project section 1</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque nihil aut eos quaerat sed deserunt molestiae alias tenetur obcaecati temporibus voluptates officiis id, ipsa eveniet sint odit enim earum molestias, eaque porro, saepe reprehenderit quibusdam quae. Doloremque asperiores repellendus corrupti.</p>
+                </div>
+                <div className={modualiseClassNames(["project-section"])}>
+                    <h2>Project section 2</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque nihil aut eos quaerat sed deserunt molestiae alias tenetur obcaecati temporibus voluptates officiis id, ipsa eveniet sint odit enim earum molestias, eaque porro, saepe reprehenderit quibusdam quae. Doloremque asperiores repellendus corrupti.</p>
+                </div>
+                <div className={modualiseClassNames(["project-section"])}>
+                    <h2>Project section 3</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque nihil aut eos quaerat sed deserunt molestiae alias tenetur obcaecati temporibus voluptates officiis id, ipsa eveniet sint odit enim earum molestias, eaque porro, saepe reprehenderit quibusdam quae. Doloremque asperiores repellendus corrupti.</p>
+                </div>
+                </div>
+
+
+
+============== CSS ================
+
+.project-headline{
+        gap: 0.5em;
+        padding: 0 1.5em;
+        width: 100%;
+        min-height: 150px;
+        gap:2em;
+    }
+    
+    .project-headline > img{
+        width: 50%;
+        height: auto;
+        object-fit:cover;
+    }
+    
+    .project-headline h1{
+        text-align: center;
+        width: 50%;
+    }
+    
+    .project-section{
+        flex-direction: column;
+        gap: 1em;
+    }
+    
+    .project-section h2{
+        margin: 0;
+        padding: 0;
+    }
+    
+    .project-main-content{
+        flex-direction: column;
+        gap: 2em;
+    }
+    
+    .individual-project-close-container{
+        width: 100%;
+    }
+    
+    @media screen and (max-width: 600px) {
+        .expanded-project{
+            padding:0.5em 0.5em;
+            width: 95.5vw;
+            height: 90vh;
+            gap: 0;
+        }
+    
+        .project-headline{
+            flex-direction: column;
+            padding: 1em 0;
+            gap: 1em;
+        }
+    
+        .project-headline> *{
+            width: 100%;
+        }
+    
+        .project-headline img{
+            display: block;
+            width: 100%;
+        }
+    }
