@@ -213,9 +213,9 @@ function App() {
             {/* <br></br> */}
             <p>My name has been Jeremy since birth but I implore you to call me Jeremiah, if you prefer.</p>
             <br></br>
-            <p>I have a wealth of interests. I often partake in programming escapades where I may whip up some software in spontaneous fashion. I snatch at any opportunity to synthesis such technical activity creative ideas and media.</p>
+            <p>I have a wealth of interests. I often partake in programming escapades where I may whip up some software in spontaneous fashion. I snatch at any opportunity to synthesise such technical activity with creative ideas and media.</p>
             <br></br>
-            <p>I have offered my esteemed services to numerous modestly-sized enterprises, including but not limited to, my capabilities in website experience design and development, and my craftmanship in the motion picture arts.</p>
+            <p>I have offered my esteemed services to numerous modestly-sized enterprises including, but not limited to, my capabilities in website experience design and development, and my craftmanship in the motion picture arts.</p>
             <br></br>
             <p>Community is a cornerstone for me, which is why I volunteer my finite time to get paid by the University of Bristol to help them educate my junior Computer Science peers through the delivery of bespoke seminars and lab support.</p>
             <br></br>
