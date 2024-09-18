@@ -1,7 +1,7 @@
 {
   "name": "react-porftfolio",
   "version": "0.1.0",
-  "homepage": "https://jeremycolfer27.github.io/react-portfolio",
+  "homepage": "https://jeremycolfer27.github.io",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.17.0",
