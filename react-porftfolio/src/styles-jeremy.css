@@ -120,13 +120,28 @@ body {
     align-items: center;
     justify-content: center;
   }
+
+  #name-heading{
+    /* border: 2px solid white; */
+    display: flex;
+    flex-direction: column;
+    gap:0.05em;
+  }
+
   .liam{
     /* border: 2px solid black; */
-    font-family: SpektraL;
+    font-family: SpektraR;
+    display: block;
+    /* border: 2px solid white; */
+
   }
   .jones{
     /* border: 2px solid black; */
-    font-family: SpektraR;
+    font-family: SpektraL;
+    display: block;
+    padding-left: 0.115em;
+
+    /* border: 2px solid white; */
   }
  
   .bio {

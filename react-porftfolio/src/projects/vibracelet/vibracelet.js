@@ -1,7 +1,7 @@
 import React from 'react';
 import { useState } from 'react';
 import styles from './vibracelet.module.css';
-import img from './assets/finalphoto.jpg';
+import img from './assets/1000px-compressed/finalphoto.jpg';
 import back_white from '../../assets/back_white.png';
 import close from '../../assets/close_white.png';
 

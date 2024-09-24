@@ -4,14 +4,14 @@ import { useState } from 'react';
 
 
 import styles from './Fantasy.module.css';
-import img from './assets/fluentree_hero.jpg';
+import img from './assets/1000px-compressed/fluentree_hero.jpg';
 import back_white from '../../assets/back_white.png';
 import close from '../../assets/close_white.png';
 import fluentree_logo_blue from './assets/fluentreeLogoBlue.png';
 import header_img from './assets/mockup-fantasy-left.png';
-import header_img_desktop from './assets/mockup-fantasy-dekstop-front.png';
-import leaderboard from './assets/leaderboard.png'
-import login from './assets/login.png'
+import header_img_desktop from './assets/1000px-compressed/mockup-fantasy-dekstop-front.png';
+import leaderboard from './assets/1000px-compressed/leaderboard.png'
+import login from './assets/1000px-compressed/login.png'
 import lesson_img from './assets/video_comprehension_final.png';
 import logoSVG from './assets/logo.svg';
 const title = "Fantasy Football Web App"

@@ -138,7 +138,7 @@ function App() {
   <div className="grid-container">
 
     <div className="name">
-      <h1>
+      <h1 id="name-heading" >
         <span className="liam first-name">JEREMY</span>
         <span className="jones last-name">COLFER</span>
       </h1>
@@ -217,7 +217,7 @@ function App() {
             <br></br>
             <p>I have offered my esteemed services to numerous modestly-sized enterprises including, but not limited to, my capabilities in website experience design and development, and my craftmanship in the motion picture arts.</p>
             <br></br>
-            <p>Community is a cornerstone for me, which is why I volunteer my finite time to get paid by the University of Bristol to help them educate my junior Computer Science peers through the delivery of bespoke seminars and lab support.</p>
+            <p>Community is a cornerstone for me, which is why I volunteer my finite time to get paid by the University of Bristol for helping them educate my junior Computer Science peers through my delivery of bespoke seminars and lab support.</p>
             <br></br>
             <p>Through consistent engagement with the Computer Science wing of my Joint-honours degree, I have come to appreciate the domains of Machine Learning, Human-Computer Interaction, and Cyber Security.</p>
             <br></br>
