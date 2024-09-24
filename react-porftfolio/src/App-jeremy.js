@@ -191,15 +191,15 @@ function App() {
           {activeLanguage === "english" && (
           <div className="plain-english-text">
             <p>I'm Jeremy, or Jeremiah :)</p>
-            <p>I'm a keen enjoyer of random coding or creative projects. I also love playing football or pretty much any ball sport that isn't rugby. </p>
+            <p>I'm enjoy working random coding or creative projects. I also love playing football or pretty much any ball sport that isn't rugby. </p>
             <br></br>
             <p>I've worked for a couple smaller companies creating social media videos and designing + building websites</p>
 
             <p>I currently work part-time for Bristol Uni, delivering seminars and lab support to students in the years below.</p>
             <br></br>
-            <p>The Computer Science segment of degree has introduced me to the fundamentals of Machine Learning, Human-Computer Interaction and Cyber Security.</p>
+            <p>The Computer Science part of my degree has introduced me to the fundamentals of Machine Learning, Human-Computer Interaction and Cyber Security.</p>
             <br></br>
-            <p>The Innovation segment of my degree has helped me develop my entreprenuerial side, with modules on new venture creation, business analytics and marketing. Through this I've engaged in loads of cross-disciplinary teamwork, business idea prototyping and presentations</p>
+            <p>The Innovation part of my degree has helped me develop my entreprenuerial side, with modules on new venture creation, business analytics and marketing. Through this I've engaged in loads of cross-disciplinary teamwork, business idea prototyping and presentations</p>
 
 
 
