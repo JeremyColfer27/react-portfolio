@@ -187,7 +187,7 @@ body {
     top: 50%;
     left: 50%;
     padding: 2em;
-    transform: translate(-50%, -50%);
+
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -198,6 +198,9 @@ body {
     background-color: rgba(200, 200, 200, 0.5);
     backdrop-filter: blur(20px);
     border: 1px solid white;
+
+    transform: translate(-50%, -50%) scale(1);
+    transition: 0.3s;
   }
 
   @media screen and (max-width: 800px) {
@@ -208,8 +211,14 @@ body {
   }
   
   #about-page.hidden {
-    display: none;
+    /* display: none; */
   }
+
+  #about-page.hidden{
+    transform: translate(-50%, -50%) scale(0);
+    transform-origin: 10% 75%;
+}
+
   
   .about-close-button {
     position: fixed; /* Position fixed to the viewport */
@@ -367,7 +376,7 @@ justify-content: center;
   
   
 
-  .contact-form{
+  #contact-form{
     z-index: 3;
 
     width: 25em;
@@ -375,7 +384,7 @@ justify-content: center;
     position: fixed;
     top:50%;
     left:50%;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%) scale(1);
 
     padding: 2em;
     border-radius: 15px;
@@ -391,7 +400,15 @@ justify-content: center;
     background-color: rgba(200, 200, 200, 0.5);
     backdrop-filter: blur(10px);
 
+    transition: 0.3s;
+
   }
+
+#contact-form.hidden{
+    transform: translate(-50%, -50%) scale(0);
+    transform-origin: 90% 75%;
+    opacity: 0;
+}
 
   .contact-close-button{
     color: rgb(92, 92, 92);
@@ -700,6 +717,7 @@ justify-content: center;
   transform: translate(-50%, -50%) scale(0);
   transform-origin: center 75%;
 }
+
 
 .projects-container{
   color:white;
