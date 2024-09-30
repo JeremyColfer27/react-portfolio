@@ -145,7 +145,7 @@ function App() {
     </div>
 
     <div className="bio">
-      <p>Hi, I'm Jeremy. <br></br>I'm studying Computer Science and Innovation (MEng) at Bristol and I love working on projects that marry technology and creativity. Please check out examples of my work below and let me know what you think!</p>
+      <p>Hi, I'm Jeremy. <br></br>I'm studying Computer Science and Innovation (MEng) at Bristol and I love working on creative technology projects. Please check out examples of my work below and let me know what you think!</p>
     </div>
 
     <div className="buttons">
