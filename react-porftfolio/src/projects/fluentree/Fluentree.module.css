@@ -540,6 +540,7 @@
         position: fixed;
         width: 100%;
         height: 90vh;
+        height: 95dvh;
         max-width: 100%;
         backdrop-filter: blur(5px);
         background: rgba(191, 191, 191, 0.6);

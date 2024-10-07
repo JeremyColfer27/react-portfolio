@@ -90,6 +90,48 @@ function App() {
     gradient.initGradient('#gradient-canvas');
   }, [])
 
+  let touchStartX = 0;
+  let touchEndX = 0;
+  
+  // const closeFunction = props.closeFunction;
+
+  // Function to check if the swipe is a valid right swipe
+  const checkForSwipe = () => {
+      if (touchEndX > touchStartX + 50) {
+          // Right swipe detected, trigger the close function
+          console.log(projectsHidden)
+          projectsHidden.forEach(p => {
+            p.isHidden = true;
+          })
+          setIsProjectOpen(false);
+
+          // window.alert("close")
+      }
+  };
+
+  // Handle touch start event
+  const handleTouchStart = (e) => {
+      touchStartX = e.changedTouches[0].screenX;
+  };
+
+  // Handle touch end event
+  const handleTouchEnd = (e) => {
+      touchEndX = e.changedTouches[0].screenX;
+      checkForSwipe(); // Check if swipe was valid
+  };
+
+  // Add and remove global event listeners for touch events
+  useEffect(() => {
+      // Add event listeners to the document element
+      document.addEventListener('touchstart', handleTouchStart);
+      document.addEventListener('touchend', handleTouchEnd);
+
+      // Cleanup event listeners when component unmounts
+      return () => {
+          document.removeEventListener('touchstart', handleTouchStart);
+          document.removeEventListener('touchend', handleTouchEnd);
+      };
+  }, []);
   //adds a class to projects page to indicate whether any project is open
   useEffect(() => {
     if(isProjectOpen) document.getElementById("projects-page").classList.add("project-open");
@@ -127,6 +169,7 @@ function App() {
   return ( 
     <div onClick={() => {}}>
 
+ 
     <div className="gradient-container">
         <canvas id="gradient-canvas" data-transition-in/>
        
@@ -141,8 +184,14 @@ function App() {
       <h1 id="name-heading" >
         <span className="liam first-name">JEREMY</span>
         <span className="jones last-name">COLFER</span>
+        {/* <svg className="svg-name-container">
+        <text  y="80" className="svg-text">JEREMY</text>
+        <text  y="150" className="svg-text">COLFER</text>
+        </svg> */}
       </h1>
     </div>
+
+
 
     <div className="bio">
       <p>Hi, I'm Jeremy. <br></br>I'm studying Computer Science and Innovation (MEng) at Bristol and I love working on creative technology projects. Please check out examples of my work below and let me know what you think!</p>
