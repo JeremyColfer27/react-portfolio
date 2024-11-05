@@ -21,7 +21,7 @@ import whatsapp from './assets/whatsapp_w.png';
 
 
 function App() {
-  const [projects, setProjects] = useState([fluentree, vibracelet, fantasy])
+  const [projects, setProjects] = useState([fluentree, fantasy])
   const [projectsHidden, setProjectsHidden] = useState(projects.map(p => {return {project: p, isHidden: true}}))
   const [isProjectOpen, setIsProjectOpen] = useState(false);
   const [message, setMessage] = useState("this is the default message");
@@ -228,7 +228,7 @@ function App() {
         <div className="about-me-mode-container">
           <ul className="mode-list">
             <li className={"mode " + (activeLanguage === "english" ? "active" : "")}><button onClick={() => setActiveLanguage("english")}>Plain English</button></li>
-            <li className={"mode " + (activeLanguage === "linkedin" ? "active" : "")}><button onClick={() => setActiveLanguage("linkedin")}>Linkedin-ese</button></li>
+            <li className={"mode " + (activeLanguage === "linkedin" ? "active" : "")}><button onClick={() => setActiveLanguage("linkedin")}>Linkedin-glish</button></li>
             <li className={"mode " + (activeLanguage === "french" ? "active" : "")}><button onClick={() => setActiveLanguage("french")}>French</button></li>
             {/* <li className="mode"></li> */}
           </ul>
