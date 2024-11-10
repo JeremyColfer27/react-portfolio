@@ -16,7 +16,7 @@ import leaderboard from './assets/1000px-compressed/leaderboard.png'
 import login from './assets/1000px-compressed/login.png'
 import lesson_img from './assets/video_comprehension_final.png';
 import logoSVG from './assets/logo.svg';
-const title = "Intramural Fantsasy"
+const title = "Intramural Fantasy"
 const subtitle = "Web App for amateur football teams"
 const imgAltText = "Pubs on Tap"
 const tags = ["Full-Stack", "Node JS", "React JS"]

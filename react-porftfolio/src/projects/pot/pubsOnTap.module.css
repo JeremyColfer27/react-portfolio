@@ -26,26 +26,7 @@
 }
 
 @media screen and (min-width: 1000px) {
-    ::-webkit-scrollbar {
-        padding-left: 10px;
-        width: 8px;
-    }
 
-    ::-webkit-scrollbar-track {
-        padding-left: 10px;
-        border-radius: 100vw;
-    }
-
-    .expanded-project ::-webkit-scrollbar-thumb {
-        padding-left: 10px;
-        border-radius: 100vw;
-        background: rgba(0, 0, 0, 0.366);
-    }
-
-    ::-webkit-scrollbar-thumb:hover {
-        padding-left: 10px;
-        background: hsl(0, 0%, 100%);
-    }
 }
 
 .expanded-project {

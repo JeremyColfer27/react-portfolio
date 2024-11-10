@@ -718,7 +718,6 @@ body {
 
 .project-button:hover{
   transition: 0.3s;
-  transform: scale(1.03);
   z-index: 1;
 }
 
