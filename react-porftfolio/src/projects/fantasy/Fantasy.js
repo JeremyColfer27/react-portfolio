@@ -4,7 +4,9 @@ import { useState } from 'react';
 
 
 import styles from './Fantasy.module.css';
-import img from './assets/1000px-compressed/fluentree_hero.jpg';
+// import img from './assets/1000px-compressed/fluentree_hero.jpg';
+// import img from './assets/mockup-fantasy-portrait.png';
+import img from './assets/thumbnail.jpg'
 import back_white from '../../assets/back_white.png';
 import close from '../../assets/close_white.png';
 import fluentree_logo_blue from './assets/fluentreeLogoBlue.png';

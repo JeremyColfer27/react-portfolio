@@ -373,7 +373,7 @@
         border-radius: 25px;
         padding: 2em 0 0 0;
         /* background: linear-gradient(to top right, #95DEFE, #D3F9DA);  */
-        background: linear-gradient(to top right, #ffffff, #e6e179); 
+        background: linear-gradient(to top right, #e38383, #fcd23b); 
 
     }
     
@@ -498,6 +498,7 @@
         text-align: center; /* Center the text within the container */
         padding: 20px; /* Optional: add some padding to avoid text touching edges */
         background: linear-gradient(to bottom right, #D3DEFF, #99D2F6); /* Linear gradient */
+
 
     }
 
@@ -840,7 +841,9 @@
         justify-content: center;
         align-items: center;
         border-radius: 25px;
-        background: linear-gradient(to top right, #ffffff, #e6e179); 
+        background: linear-gradient(to top right, #2b2b2b, #e6e179); 
+        background: linear-gradient(to top right, #e38383, #fcd23b); 
+
         /* background: linear-gradient(to top right, #95DEFE, #D3F9DA);  */
         /* Linear gradient */
 

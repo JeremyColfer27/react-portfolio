@@ -320,7 +320,7 @@ function App() {
 
       <div className="socials">
 
-      <a href="www.linkedin.com/in/jeremycolfer27" target="_blank" rel="noopener noreferrer">
+      <a href="https://www.linkedin.com/in/jeremycolfer27" target="_blank" rel="noopener noreferrer">
         <img src={linkedin} alt="Open my Linkedin Profile" />
       </a>
 
