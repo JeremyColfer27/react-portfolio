@@ -12,6 +12,7 @@ import header_img from './assets/1000px-compressed/fluentree_hero.jpg';
 import lesson_img from './assets/1000px-compressed/video_comprehension_final.png';
 import logoSVG from './assets/logo.svg';
 const title = "Fluentree"
+const subtitle = "Conceptual Language Learning Platform"
 const imgAltText = "Pubs on Tap"
 const tags = ["Venture Creation", "Ideation", "Sprint"]
 const hiddenClassName = styles["expanded-project-hidden"]
@@ -120,4 +121,4 @@ function TemplatePage(props){
 
 }
 
-export default {title, tags, img, imgAltText, TemplatePage, hiddenClassName};
+export default {title, subtitle, tags, img, imgAltText, TemplatePage, hiddenClassName};

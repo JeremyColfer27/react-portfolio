@@ -16,7 +16,8 @@ import leaderboard from './assets/1000px-compressed/leaderboard.png'
 import login from './assets/1000px-compressed/login.png'
 import lesson_img from './assets/video_comprehension_final.png';
 import logoSVG from './assets/logo.svg';
-const title = "Fantasy Football Web App"
+const title = "Intramural Fantsasy"
+const subtitle = "Web App for amateur football teams"
 const imgAltText = "Pubs on Tap"
 const tags = ["Full-Stack", "Node JS", "React JS"]
 const hiddenClassName = styles["expanded-project-hidden"]
@@ -196,4 +197,4 @@ function TemplatePage(props){
 
 }
 
-export default {title, tags, img, imgAltText, TemplatePage, hiddenClassName};
+export default {title, subtitle, tags, img, imgAltText, TemplatePage, hiddenClassName};

@@ -402,6 +402,8 @@ function App() {
 
 <div className="project-info">
                   <h3 className="project-thumbnail-title">{p.title}</h3>
+                  {p.subtitle ? <h4 className='project-thumbnail-subtitle'>{p.subtitle}</h4> : <></>}
+                                   
                   <div className="tags">
                     {p.tags.map( (t) => 
                       <p className='tag'>{t}</p>
