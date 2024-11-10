@@ -85,9 +85,15 @@ function App() {
   }
 }
 
+// document.addEventListener("resize", () => {
+//   documentElement.height = window.innerHeight;
+// })
+
   useEffect(() => {
     const gradient = new Gradient();
     gradient.initGradient('#gradient-canvas');
+
+
   }, [])
 
   let touchStartX = 0;
