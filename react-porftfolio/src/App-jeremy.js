@@ -109,29 +109,29 @@ function App() {
       }
   };
 
-  // Handle touch start event
-  const handleTouchStart = (e) => {
-      touchStartX = e.changedTouches[0].screenX;
-  };
+  // // Handle touch start event
+  // const handleTouchStart = (e) => {
+  //     touchStartX = e.changedTouches[0].screenX;
+  // };
 
-  // Handle touch end event
-  const handleTouchEnd = (e) => {
-      touchEndX = e.changedTouches[0].screenX;
-      checkForSwipe(); // Check if swipe was valid
-  };
+  // // Handle touch end event
+  // const handleTouchEnd = (e) => {
+  //     touchEndX = e.changedTouches[0].screenX;
+  //     checkForSwipe(); // Check if swipe was valid
+  // };
 
-  // Add and remove global event listeners for touch events
-  useEffect(() => {
-      // Add event listeners to the document element
-      document.addEventListener('touchstart', handleTouchStart);
-      document.addEventListener('touchend', handleTouchEnd);
+  // // Add and remove global event listeners for touch events
+  // useEffect(() => {
+  //     // Add event listeners to the document element
+  //     document.addEventListener('touchstart', handleTouchStart);
+  //     document.addEventListener('touchend', handleTouchEnd);
 
-      // Cleanup event listeners when component unmounts
-      return () => {
-          document.removeEventListener('touchstart', handleTouchStart);
-          document.removeEventListener('touchend', handleTouchEnd);
-      };
-  }, []);
+  //     // Cleanup event listeners when component unmounts
+  //     return () => {
+  //         document.removeEventListener('touchstart', handleTouchStart);
+  //         document.removeEventListener('touchend', handleTouchEnd);
+  //     };
+  // }, []);
   //adds a class to projects page to indicate whether any project is open
   useEffect(() => {
     if(isProjectOpen) document.getElementById("projects-page").classList.add("project-open");
