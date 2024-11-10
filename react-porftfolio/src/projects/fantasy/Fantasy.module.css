@@ -306,6 +306,16 @@
         width: auto;
     }
 
+    .close_button{
+        color: white;
+    }
+
+    p.bottom-back-button{
+        color: white; 
+        border: 2px solid pink;
+    }
+
+
     .tags {
         display: flex;
         align-items: center;
@@ -750,6 +760,10 @@
     .back_button img, .close_button img {
         height: 1.8em;
         width: auto;
+    }
+
+    .bottom-back-button{
+        color: white; 
     }
 
     .tags {

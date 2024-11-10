@@ -939,7 +939,7 @@ justify-content: center;
   left:0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(to top, rgba(0, 0, 0, 0.653), rgba(0, 0, 0, 0.059));
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.403), rgba(0, 0, 0, 0.059));
   z-index: 2;
   border-radius: inherit;
   /* opacity: 0.8; */

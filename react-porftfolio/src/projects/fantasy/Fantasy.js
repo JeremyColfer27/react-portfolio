@@ -188,7 +188,21 @@ function TemplatePage(props){
 
 
 
-               
+            <div className={modualiseClassNames(["top", "expanded-project-top"])}>
+                <button className={styles["back_button"]}
+                    onClick={e => { e.stopPropagation(); closeFunction() }}
+                >
+                    <img className="close-button" src={back_white} alt="close window icon" />
+                    {/* <p className="bottom-back-button">Back to projects</p> */}
+                </button>
+
+
+{/* 
+                <button className={styles["close_button"]}
+                onClick={() => document.getElementById("projects-page").classList.toggle("hidden")}                >
+                    <img className="close-button" src={close} alt="close window icon" />
+                </button> */}
+            </div>
 
             </div>
         </div>
