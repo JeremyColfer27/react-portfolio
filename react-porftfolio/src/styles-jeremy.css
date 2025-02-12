@@ -360,7 +360,7 @@ justify-content: center;
       width: 20vw;
       min-width: 0px;
       max-width: unset;
-      border: 3px solid white;
+      border: 1px solid white;
       /* border: 2px solid blue; */
     }
 
