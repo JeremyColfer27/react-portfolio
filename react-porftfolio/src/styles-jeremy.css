@@ -357,7 +357,7 @@ justify-content: center;
 
   @media screen and (max-width: 800px) {
     .about-image-container{
-      width: 30vw;
+      width: 20vw;
       min-width: 0px;
       max-width: unset;
       border: 3px solid white;
