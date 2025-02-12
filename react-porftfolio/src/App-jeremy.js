@@ -4,7 +4,7 @@ import logo from './logo.svg';
 import close from './assets/close_white.png';
 
 import './App.css';
-import './styles.css'
+// import './styles.css'
 import './styles-jeremy.css'
 import { Gradient } from 'whatamesh'
 import {useEffect} from 'react'
@@ -17,6 +17,8 @@ import linkedin from './assets/linkedin_w.png';
 import email_w from './assets/email_w.png';
 import github from './assets/github_w.png';
 import whatsapp from './assets/whatsapp_w.png';
+import englishPhoto from './assets/jeremysquare.jpg';
+
 
 
 
@@ -225,7 +227,7 @@ function App() {
 
     <div className="about-content">
       <div className="about-image-container">
-        <img className="about-image" alt='a picture of me'></img>
+        <img className="about-image" src={englishPhoto} alt='a picture of me' />
       </div>
 
       <div className="about-text-content">
@@ -246,7 +248,7 @@ function App() {
           {activeLanguage === "english" && (
           <div className="plain-english-text">
             <p>I'm Jeremy, or Jeremiah :)</p>
-            <p>I'm enjoy working random coding or creative projects. I also love playing football or pretty much any ball sport that isn't rugby. </p>
+            <p>I enjoy working on random coding or creative projects. I also love playing football or pretty much any ball sport that isn't rugby. </p>
             <br></br>
             <p>I've worked for a couple smaller companies creating social media videos and designing + building websites</p>
 
