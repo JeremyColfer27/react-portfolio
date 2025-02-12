@@ -17,7 +17,7 @@ import linkedin from './assets/linkedin_w.png';
 import email_w from './assets/email_w.png';
 import github from './assets/github_w.png';
 import whatsapp from './assets/whatsapp_w.png';
-import englishPhoto from './assets/jeremysquare.jpg';
+import englishPhoto from './assets/jeremysquare2.jpg';
 
 
 
