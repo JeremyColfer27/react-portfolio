@@ -1,19 +1,19 @@
 {
   "files": {
-    "main.css": "/static/css/main.0526f1d6.chunk.css",
-    "main.js": "/static/js/main.c1f436e6.chunk.js",
-    "main.js.map": "/static/js/main.c1f436e6.chunk.js.map",
+    "main.css": "/static/css/main.48621b74.chunk.css",
+    "main.js": "/static/js/main.7dc8a0df.chunk.js",
+    "main.js.map": "/static/js/main.7dc8a0df.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.9fb77ce1.js",
     "runtime-main.js.map": "/static/js/runtime-main.9fb77ce1.js.map",
-    "static/js/2.e15cf38b.chunk.js": "/static/js/2.e15cf38b.chunk.js",
-    "static/js/2.e15cf38b.chunk.js.map": "/static/js/2.e15cf38b.chunk.js.map",
+    "static/js/2.52b4accf.chunk.js": "/static/js/2.52b4accf.chunk.js",
+    "static/js/2.52b4accf.chunk.js.map": "/static/js/2.52b4accf.chunk.js.map",
     "static/js/3.9a820989.chunk.js": "/static/js/3.9a820989.chunk.js",
     "static/js/3.9a820989.chunk.js.map": "/static/js/3.9a820989.chunk.js.map",
     "index.html": "/index.html",
-    "precache-manifest.1eedc3436524205c80a01fc95b0e10f6.js": "/precache-manifest.1eedc3436524205c80a01fc95b0e10f6.js",
+    "precache-manifest.c980087a4391768b94fbf2175c255383.js": "/precache-manifest.c980087a4391768b94fbf2175c255383.js",
     "service-worker.js": "/service-worker.js",
-    "static/css/main.0526f1d6.chunk.css.map": "/static/css/main.0526f1d6.chunk.css.map",
-    "static/js/2.e15cf38b.chunk.js.LICENSE.txt": "/static/js/2.e15cf38b.chunk.js.LICENSE.txt",
+    "static/css/main.48621b74.chunk.css.map": "/static/css/main.48621b74.chunk.css.map",
+    "static/js/2.52b4accf.chunk.js.LICENSE.txt": "/static/js/2.52b4accf.chunk.js.LICENSE.txt",
     "static/media/styles-jeremy.css": "/static/media/noise.b9118d38.png",
     "static/media/Fluentree.module.css": "/static/media/Poppins-ThinItalic.01555d25.ttf",
     "static/media/close_white.png": "/static/media/close_white.3e53cbd7.png",
@@ -22,6 +22,7 @@
     "static/media/fluentreeLogoBlue.png": "/static/media/fluentreeLogoBlue.b6af6b11.png",
     "static/media/fluentree_hero.jpg": "/static/media/fluentree_hero.2031adee.jpg",
     "static/media/github_w.png": "/static/media/github_w.5ebc5998.png",
+    "static/media/jeremysquare.jpg": "/static/media/jeremysquare.4a7307b3.jpg",
     "static/media/leaderboard.png": "/static/media/leaderboard.e172478e.png",
     "static/media/linkedin_w.png": "/static/media/linkedin_w.712db260.png",
     "static/media/login.png": "/static/media/login.1005641f.png",
@@ -34,8 +35,8 @@
   },
   "entrypoints": [
     "static/js/runtime-main.9fb77ce1.js",
-    "static/js/2.e15cf38b.chunk.js",
-    "static/css/main.0526f1d6.chunk.css",
-    "static/js/main.c1f436e6.chunk.js"
+    "static/js/2.52b4accf.chunk.js",
+    "static/css/main.48621b74.chunk.css",
+    "static/js/main.7dc8a0df.chunk.js"
   ]
 }
