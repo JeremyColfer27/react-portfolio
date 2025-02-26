@@ -13,6 +13,9 @@ import {useEffect} from 'react'
 import fluentree from './projects/fluentree/Fluentree'
 import fantasy from './projects/fantasy/Fantasy'
 import vibracelet from './projects/vibracelet/vibracelet'
+import pitchside from './projects/pitchside/pitchside'
+import social from './projects/social/social'
+
 import linkedin from './assets/linkedin_w.png';
 import email_w from './assets/email_w.png';
 import github from './assets/github_w.png';
@@ -23,7 +26,7 @@ import englishPhoto from './assets/jeremysquare2.jpg';
 
 
 function App() {
-  const [projects, setProjects] = useState([fluentree, fantasy])
+  const [projects, setProjects] = useState([vibracelet, fluentree, fantasy, pitchside, social])
   const [projectsHidden, setProjectsHidden] = useState(projects.map(p => {return {project: p, isHidden: true}}))
   const [isProjectOpen, setIsProjectOpen] = useState(false);
   const [message, setMessage] = useState("this is the default message");
@@ -31,6 +34,30 @@ function App() {
   const [name, setName] = useState("default name");
   const emailInputRef = useRef(null);
   const [activeLanguage, setActiveLanguage] = useState("english");
+
+  const [skills, setSkills] = useState([
+    {"skill": "User-Centred Approach", "status": "unchecked"},
+    {"skill": "Interaction Prototyping Skills", "status": "unchecked"},
+    {"skill": "Strong Technical Skills", "status": "unchecked"},
+    // {"skill": "Capacity to learn quickly", "status": "unchecked"},
+    {"skill": "Communication Skills", "status": "unchecked"},
+    // {"skill": "Leadership qualities", "status": "unchecked"},
+  ])
+
+  const toggleChecklistSkill = function(skill){
+    const newSkills = JSON.parse(JSON.stringify(skills));
+    newSkills.map(s => {
+      if(s.skill == skill){
+        if(s.status == "checked"){
+          s.status = "unchecked";
+        }
+        else{
+          s.status = "checked";
+        }
+      }
+    })
+    setSkills(newSkills);
+  }
 
   const enableMessageSend = true;
 
@@ -213,7 +240,22 @@ function App() {
       <button type="button" onClick={() => document.getElementById("contact-form").classList.remove("hidden")}>Contact</button>
 
     </div>
+
+
   </div>
+
+  <div id="checklist-container">
+          <ul className="checklist">
+            {skills.map((s, index) => {
+              return(
+              <li id={`checklist-skill-${index}`}
+                  onClick={() => toggleChecklistSkill(s.skill)}
+                  className = {`checklist-skill ${s.status}`}
+              ><div className="checkbox"></div><p>{s.skill}</p></li>
+              )
+            })}
+          </ul>
+    </div>
 
   <div id="about-page" className="about-page hidden">
     <div className="about-container">
@@ -248,15 +290,18 @@ function App() {
           {activeLanguage === "english" && (
           <div className="plain-english-text">
             <p>I'm Jeremy, or Jeremiah :)</p>
-            <p>I enjoy working on random coding or creative projects. I also love playing football or pretty much any ball sport that isn't rugby. </p>
+            <p>I love working on random coding or creative projects. I also love playing football or pretty much any ball sport that isn't rugby. </p>
             <br></br>
-            <p>I've worked for a couple smaller companies creating social media videos and designing + building websites</p>
+            {/* <p>I've worked for a couple smaller companies creating social media videos and designing + building websites</p> */}
+            <p>I study Computer Science with Innovation which is priming me for taking an entrepreneural leap towards designing and building sports recording solutions as part of my start-up Pitchside AI.</p>
 
-            <p>I currently work part-time for Bristol Uni, delivering seminars and lab support to students in the years below.</p>
+            {/* <p>I currently work part-time for Bristol Uni, delivering seminars and lab support to students in the years below.</p> */}
             <br></br>
-            <p>The Computer Science part of my degree has introduced me to the fundamentals of Machine Learning, Human-Computer Interaction and Cyber Security.</p>
+            <p>The Computer Science part of my degree has introduced me to the fundamentals of Computer Vision, Human-Computer Interaction and full-stack development.</p>
             <br></br>
-            <p>The Innovation part of my degree has helped me develop my entreprenuerial side, with modules on new venture creation, business analytics and marketing. Through this I've engaged in loads of cross-disciplinary teamwork, business idea prototyping and presentations</p>
+            <p>The Innovation part of my degree has helped me develop my entreprenuerial side, with modules on new venture creation, business analytics and marketing. Through this I've engaged in loads of cross-disciplinary teamwork, business idea prototyping and presentations.</p>
+            <br></br>
+            <p>If this this sounds interesting, even in the slightest, then I encourage you to check out my projects. And if you are really really interested in what I'm working on then don't hesitate to contact me :)</p>
 
 
 
@@ -388,7 +433,7 @@ function App() {
         
       </div>
       <div className="top">
-        <h2 className='projects-header'>PROJECTS</h2>
+        <h2 className='projects-header'>MY PROJECTS</h2>
         <button className='projects-close-button'
         onClick={() => document.getElementById("projects-page").classList.toggle("hidden")}
         >
