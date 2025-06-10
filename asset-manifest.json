@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.77cc8abe.css",
-    "main.js": "/static/js/main.183444c5.js",
+    "main.css": "/static/css/main.0a5489f7.css",
+    "main.js": "/static/js/main.c2ffb70a.js",
     "static/js/453.bb4b9f61.chunk.js": "/static/js/453.bb4b9f61.chunk.js",
     "static/media/Vibracelet_TeamE_2024.pdf": "/static/media/Vibracelet_TeamE_2024.5d06d118a88f55c8c440.pdf",
     "static/media/football-activity.jpg": "/static/media/football-activity.2fba7edb39e6f2c0236a.jpg",
@@ -74,14 +74,14 @@
     "static/media/linkedin_w.png": "/static/media/linkedin_w.3822acaf9b8f570f1582.png",
     "static/media/close_white.png": "/static/media/close_white.94594d6775712082c2f0.png",
     "static/media/logo.svg": "/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
-    "static/media/vibracelet_icon.svg": "/static/media/vibracelet_icon.04c65402c6272f89ccb4e9f87983175f.svg",
+    "static/media/vibracelet_icon.svg": "/static/media/vibracelet_icon.d5074edbae4aecb47536d7a32ff80340.svg",
     "index.html": "/index.html",
-    "main.77cc8abe.css.map": "/static/css/main.77cc8abe.css.map",
-    "main.183444c5.js.map": "/static/js/main.183444c5.js.map",
+    "main.0a5489f7.css.map": "/static/css/main.0a5489f7.css.map",
+    "main.c2ffb70a.js.map": "/static/js/main.c2ffb70a.js.map",
     "453.bb4b9f61.chunk.js.map": "/static/js/453.bb4b9f61.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.77cc8abe.css",
-    "static/js/main.183444c5.js"
+    "static/css/main.0a5489f7.css",
+    "static/js/main.c2ffb70a.js"
   ]
 }
