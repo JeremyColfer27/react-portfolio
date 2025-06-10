@@ -437,12 +437,12 @@ justify-content: center;
     /* justify-content: start; */
     width: 100%; /* Ensure the container takes the full width */
 
-    aspect-ratio: 1/1;
     min-width: 150px;
     max-width: 15vw;
   }
 
   .about-image{
+    max-width: 100%;
     border-radius: 20px;
     object-fit: cover;
     border: none;

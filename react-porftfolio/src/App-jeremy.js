@@ -244,7 +244,7 @@ function App() {
 
   </div>
 
-  <div id="checklist-container">
+  {/* <div id="checklist-container">
           <ul className="checklist">
             {skills.map((s, index) => {
               return(
@@ -255,7 +255,7 @@ function App() {
               )
             })}
           </ul>
-    </div>
+    </div> */}
 
   <div id="about-page" className="about-page hidden">
     <div className="about-container">
