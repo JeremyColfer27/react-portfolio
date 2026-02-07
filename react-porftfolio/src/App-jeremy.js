@@ -26,7 +26,7 @@ import englishPhoto from './assets/jeremysquare2.jpg';
 
 
 function App() {
-  const [projects, setProjects] = useState([vibracelet, fluentree, fantasy, pitchside, social])
+  const [projects, setProjects] = useState([vibracelet, fantasy, fluentree, social])
   const [projectsHidden, setProjectsHidden] = useState(projects.map(p => {return {project: p, isHidden: true}}))
   const [isProjectOpen, setIsProjectOpen] = useState(false);
   const [message, setMessage] = useState("this is the default message");
@@ -229,7 +229,7 @@ function App() {
 
 
     <div className="bio">
-      <p>Hi, I'm Jeremy. <br></br>I'm studying Computer Science and Innovation (MEng) at Bristol and I love working on creative technology projects. Please check out examples of my work below and let me know what you think!</p>
+      <p>Hi, I'm Jeremy. <br></br>Co-Founder and CTO of <a href="https://pitchwise.uk" target="_blank" rel="noopener noreferrer">Pitchwise</a>. <br></br>Top-ranked graduate in Computer Science with Innovation (MEng) at Bristol.</p>
     </div>
 
     <div className="buttons">
@@ -290,14 +290,14 @@ function App() {
           {activeLanguage === "english" && (
           <div className="plain-english-text">
             <p>I'm Jeremy, or Jeremiah :)</p>
-            <p>I love working on random coding or creative projects. I also love playing football or pretty much any ball sport that isn't rugby. </p>
+            <p>I love working on creative coding projects. I also love playing football or pretty much any ball sport that isn't rugby. </p>
             <br></br>
             {/* <p>I've worked for a couple smaller companies creating social media videos and designing + building websites</p> */}
-            <p>I study Computer Science with Innovation which is priming me for taking an entrepreneural leap towards designing and building sports recording solutions as part of my start-up Pitchside AI.</p>
+            <p>I studied Computer Science with Innovation which primed me for taking an entrepreneural leap towards designing and building sports recording solutions as part of my start-up Pitchwise.</p>
 
             {/* <p>I currently work part-time for Bristol Uni, delivering seminars and lab support to students in the years below.</p> */}
             <br></br>
-            <p>The Computer Science part of my degree has introduced me to the fundamentals of Computer Vision, Human-Computer Interaction and full-stack development.</p>
+            <p>The Computer Science part of my degree introduced me to the fundamentals of Computer Vision, Human-Computer Interaction and full-stack development.</p>
             <br></br>
             <p>The Innovation part of my degree has helped me develop my entreprenuerial side, with modules on new venture creation, business analytics and marketing. Through this I've engaged in loads of cross-disciplinary teamwork, business idea prototyping and presentations.</p>
             <br></br>
@@ -315,11 +315,11 @@ function App() {
             {/* <br></br> */}
             <p>My name has been Jeremy since birth but I implore you to call me Jeremiah, if you prefer.</p>
             <br></br>
-            <p>I have a wealth of interests. I often partake in programming escapades where I may whip up some software in spontaneous fashion. I snatch at any opportunity to synthesise such technical activity with creative ideas and media.</p>
+            <p>I have a wealth of interests. I often partake in programming escapades where I whip up fun software in spontaneous fashion. I snatch at any opportunity to synthesise such technical activity with creative ideas and media.</p>
             <br></br>
             <p>I have offered my esteemed services to numerous modestly-sized enterprises including, but not limited to, my capabilities in website experience design and development, and my craftmanship in the motion picture arts.</p>
             <br></br>
-            <p>Community is a cornerstone for me, which is why I volunteer my finite time to get paid by the University of Bristol for helping them educate my junior Computer Science peers through my delivery of bespoke seminars and lab support.</p>
+            <p>Community is a cornerstone for me, which is why I volunteered my finite time to get paid by the University of Bristol for helping them educate my junior Computer Science peers through my delivery of bespoke seminars and lab support.</p>
             <br></br>
             <p>Through consistent engagement with the Computer Science wing of my Joint-honours degree, I have come to appreciate the domains of Machine Learning, Human-Computer Interaction, and Cyber Security.</p>
             <br></br>
